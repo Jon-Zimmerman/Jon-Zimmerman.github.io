@@ -1,2 +1,0 @@
-﻿# Jon Zimmerman - Portfolio
-

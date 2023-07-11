@@ -2,18 +2,14 @@ import ThreeJSModel from "./threeJS/ThreeJSModel.js";
 import AnimationName from "./animatedName/AnimatedName";
 import { Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-} from "@mui/material/styles";
+
 import { Button } from "@mui/material";
 //import Button from '@mui/base/Button';
 import { Link } from "react-scroll";
 
 import { styles } from "./Header-style";
 import useClasses from "../../../../components/useClasses.js";
-import { display } from "@mui/system";
+
 
 const textVariants = {
   hidden: {

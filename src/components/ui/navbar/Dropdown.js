@@ -1,14 +1,5 @@
-import React, { useState } from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  SwipeableDrawer,
-  Divider,
-  List,
-  ListItem,
-  Typography,
-} from "@mui/material";
+import React from "react";
+
 
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -16,7 +7,7 @@ import { styles } from "./Navbar-style.js";
 import useClasses from "../../useClasses.js";
 
 const linkVariants = {
-  hidden: (index) => ({
+  hidden: () => ({
     y: -30,
     opacity: 0,
   }),
@@ -30,7 +21,7 @@ const linkVariants = {
     },
   }),
 };
-const Dropdown = ({ submenus, setDropdown, dropdown }) => {
+const Dropdown = ({ submenus, dropdown }) => {
   const classes = useClasses(styles);
   return (
     <ul className={classes.dropdown + ` ${dropdown ? "show" : ""}`}>

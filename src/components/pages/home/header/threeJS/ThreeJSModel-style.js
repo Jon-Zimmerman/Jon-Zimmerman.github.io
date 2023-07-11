@@ -2,7 +2,7 @@
 
 export const styles = (theme) => ({
   canvas: {
-    display: "block",
+    //display: "block",
     // width: "100%",
     // height:"100%",
 

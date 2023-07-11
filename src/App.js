@@ -1,6 +1,6 @@
 //import logo from './logo.svg';
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //import './components/pages/home2/Home.js';
 
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,11 +12,11 @@ import NavBar from "./components/ui/navbar/Navbar.js";
 import Footer from "./components/ui/footer/Footer.js";
 import ScrollToTop from "./components/ui/scrollToTop/ScrollToTop.js";
 
-import { styles } from "./App-style";
-import useClasses from "./components/useClasses.js";
+// import { styles } from "./App-style";
+// import useClasses from "./components/useClasses.js";
 
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { green, purple } from "@mui/material/colors";
+import { green } from "@mui/material/colors";
 import { Container } from "@mui/system";
 
 let initialTheme = false;
@@ -27,9 +27,8 @@ if (localStorage.getItem("theme") === "dark") {
 }
 
 function App() {
-  const classes = useClasses(styles);
+  //const classes = useClasses(styles);
   const [isDarkMode, setIsDarkMode] = useState(initialTheme);
-  const [isThemeChanged, setIsThemeChanged] = useState(false);
 
   //const { slides, title } = projectContent[0];
 
@@ -63,7 +62,7 @@ function App() {
             <NavBar
               isDarkMode={isDarkMode}
               setIsDarkMode={setIsDarkMode}
-              setIsThemeChanged={setIsThemeChanged}
+      
             />
             <Container sx={{ paddingTop: "70px" }}>
               <Routes>
@@ -95,7 +94,7 @@ function App() {
             <Footer
               isDarkMode={isDarkMode}
               setIsDarkMode={setIsDarkMode}
-              setIsThemeChanged={setIsThemeChanged}
+     
             />
             <ScrollToTop showBelow={200} theme={isDarkMode} />
           </CssBaseline>

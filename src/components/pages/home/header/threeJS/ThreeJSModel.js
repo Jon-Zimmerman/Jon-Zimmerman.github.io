@@ -3,14 +3,14 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import {
   Environment,
-  Float,
+
   ContactShadows,
   OrbitControls,
-  Stage,
+
 } from "@react-three/drei";
 import { LayerMaterial, Color, Depth, Noise } from "lamina";
 
-import { motion } from "framer-motion";
+
 import { useGLTF } from "@react-three/drei";
 
 import { styles } from "./ThreeJSModel-style";
@@ -19,7 +19,7 @@ import useClasses from "../../../../useClasses.js";
 const ThreeJSModel = () => {
   const ref = useRef();
   const classes = useClasses(styles);
-  const { nodes, materials } = useGLTF("/Arm.glb");
+  const { nodes } = useGLTF("/Arm.glb");
   return (
     <Canvas
       className={classes.canvas}
@@ -86,14 +86,6 @@ const ThreeJSModel = () => {
     </Canvas>
   );
 };
-function Striplight(props) {
-  return (
-    <mesh {...props}>
-      <boxGeometry />
-      <meshBasicMaterial color="white" />
-    </mesh>
-  );
-}
 
 export default ThreeJSModel;
 

@@ -1,5 +1,5 @@
 import { Container, Typography } from "@mui/material";
-import Box from "@mui/material/Box";
+
 import { styles } from "./About-style";
 import Title from "../../../ui/pageTitle/PageTitle.js";
 import aboutMeImage from "../../../../assets/About_Me_4.png";

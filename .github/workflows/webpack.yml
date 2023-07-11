@@ -23,4 +23,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build
-
+      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/deploy-pages@v2

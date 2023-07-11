@@ -1,7 +1,7 @@
 import {
   Container,
   Typography,
-  Chip,
+
   List,
   ListItem,
   ListItemIcon,

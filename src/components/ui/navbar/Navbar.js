@@ -56,7 +56,7 @@ const backToTop = () => {
 const Navbar = (props) => {
   const classes = useClasses(styles);
   const [open, setOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+
   return (
     <AppBar position="sticky" color="default" className={classes.navbar}>
       <Toolbar
@@ -113,10 +113,10 @@ const Navbar = (props) => {
                   </Link>
                 </ListItem>
                 <List sx={{ mt: "-10px" }}>
-                  {item.submenu.map((subItem, index) => (
+                  {item.submenu.map((subItem) => (
                     <ListItem key={subItem.name} sx={{ pl: 4 }}>
                       <Link
-                        className={"submenu " + `${classes.navlink}`}
+                        className={`submenu ${classes.navlink}`}
                         to={subItem.href}
                         //smooth={true}
                         offset={-50}

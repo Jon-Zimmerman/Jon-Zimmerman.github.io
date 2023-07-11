@@ -1,6 +1,4 @@
-//import { makeStyles } from '@mui/styles';
 
-import { Center } from "@react-three/drei";
 
 export const styles = theme => ({
   footer: {
@@ -20,9 +18,7 @@ export const styles = theme => ({
       flexDirection: "column",
     },
     margin: "1rem auto !important",
-    "& svg": {
-      color: "#FFF",
-    },
+
     bottom: 0,
     width: "50%",
     justifyContent: "center",

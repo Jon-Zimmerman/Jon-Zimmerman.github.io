@@ -8,7 +8,7 @@ import useClasses from "../../useClasses.js";
 import Dropdown from "./Dropdown.js";
 
 const linkVariants = {
-  hidden: (index) => ({
+  hidden: () => ({
     y: -30,
     opacity: 0,
   }),
@@ -33,7 +33,7 @@ const NavMenu = ({ item }) => {
           onMouseOver={() => setDropdown(() => true)}
           onMouseLeave={() => setDropdown(() => false)}
         >
-          <Link className={ "multi " +` ${classes.navlink}`} type="button"
+          <Link className={`multi  ${classes.navlink}`} type="button"
           >
             {item.name}
           </Link>

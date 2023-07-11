@@ -1,8 +1,8 @@
 
-
 import { styles } from "./AnimatedName-style";
 import useClasses from "../../../../../components/useClasses.js"
-import { useTheme } from '@emotion/react';
+
+//import { useTheme } from '@emotion/react';
 import { Typography } from '@mui/material';
 
 
@@ -28,7 +28,7 @@ const tagMap = {
 const AnimatedCharacters = (props) => {
   let theme = createTheme();
   theme = responsiveFontSizes(theme);
-  const classes = useClasses(styles);
+
   // Framer Motion variant object, for controlling animation
   const item = {
     hidden: {
@@ -108,11 +108,11 @@ const AnimatedCharacters = (props) => {
   );
 };
 
-const AnimatedName = (props) => {
+const AnimatedName = () => {
   const classes = useClasses(styles);
-  const theme = useTheme();
-  const mode = theme.palette.mode;
-  const [replay, setReplay] = useState(true);
+
+
+  const [replay] = useState(true);
   // Placeholder text data, as if from API
   const placeholderText = [
     { type: "name1", text: "Jon" },

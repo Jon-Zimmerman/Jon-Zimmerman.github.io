@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { styles } from "./MediaCarousel-style";
@@ -12,17 +12,16 @@ import { Typography } from "@mui/material";
 import "yet-another-react-lightbox/styles.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-import Video from "yet-another-react-lightbox/plugins/video";
+
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Counter from "yet-another-react-lightbox/plugins/counter";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
-import Button, { ButtonProps } from "@mui/material/Button";
+
 import { Lightbox, Slide, YoutubeSlide } from "yet-another-react-lightbox";
 
-type LightboxButtonProps = Pick<ButtonProps, "onClick">;
-declare var require: any;
+
 function isCustomSlide(slide: Slide): slide is YoutubeSlide {
   return slide.type === "custom-slide";
 }
@@ -37,11 +36,11 @@ declare module "yet-another-react-lightbox" {
 }
 const MediaCarousel = (props) => {
   const classes = useClasses(styles);
-  const { slides, title } = props.project;
+  const { slides } = props.project;
 
   const [modalOpen, setModalOpen] = React.useState(false);
   const [index, setIndex] = React.useState(0);
-  const clickItem = (index, item) => {
+  const clickItem = (index) => {
     setModalOpen(true);
     setIndex(index);
   };

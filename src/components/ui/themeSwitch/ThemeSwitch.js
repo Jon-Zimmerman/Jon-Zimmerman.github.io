@@ -53,7 +53,7 @@ const ModeSwitch = styled(Switch)(({ theme }) => ({
   },
   "& .MuiSwitch-track": {
     opacity: 1,
-    backgroundColor: theme.palette.mode === "dark" ? "#ededed" : "#ededed",
+    //backgroundColor: theme.palette.mode === "dark" ? "#ededed" : "#ededed",
 
     borderRadius: "25px",
     backgroundColor: "#c7c7c7",
@@ -62,15 +62,14 @@ const ModeSwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const ThemeSwitch = (props) => {
-  const { isDarkMode, setIsDarkMode, setIsThemeChanged } = props;
+  const { isDarkMode, setIsDarkMode } = props;
   const changeSwitchHandler = () => {
     let theme = !isDarkMode ? "dark" : "light";
     localStorage.setItem("theme", theme);
     setIsDarkMode((prevValue) => {
       return !prevValue;
     });
-    //Once this state set to true the fill animation inside the AnimationName component will be removed
-    setIsThemeChanged(true);
+
   };
   return <ModeSwitch checked={isDarkMode} onChange={changeSwitchHandler} />;
 };

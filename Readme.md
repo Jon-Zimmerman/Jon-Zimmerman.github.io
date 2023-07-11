@@ -1,2 +1,2 @@
-My Personal portfolio! Hosted at jonzimm.com
+﻿# Jon Zimmerman - Portfolio
 

@@ -29,7 +29,7 @@ export const PathStructure = [
   },
   {
     name: "Prototyping",
-    href: "/prototyping",
+    href: "",
     submenu: [
       {
         name: "Custom CNC",

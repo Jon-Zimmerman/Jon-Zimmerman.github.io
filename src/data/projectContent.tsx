@@ -60,11 +60,6 @@ export const projectContent = [
           "The robot CAD created in Fusion 360 with a representation of the scoring positions.",
         src: require("../assets/FRC_Robot_CAD.jpg"),
       },
-      {
-        description:
-          "The robot docking on the charge station at the end of the match for extra points.",
-        src: require("../assets/FRC_Robot_Ramp.jpg"),
-      },
     ],
 
     links: {
@@ -136,7 +131,8 @@ export const projectContent = [
   {
     id: 4,
     title: "Custom CNC",
-    description: "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
+    description:
+      "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
     skills: ["CAD", "Electronics"],
     slides: [
       {
@@ -151,20 +147,37 @@ export const projectContent = [
     links: {
       url: "/custom-cnc",
     },
-  },  
+  },
   {
     id: 5,
     title: "3D Printer Enclosure",
-    description: "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
-    skills: ["CAD", "Electronics"],
+    description: (
+      <>
+        I built a custom{" "}
+        <strong>
+           Smart 3D Printer Enclosure with a variable speed fume
+          extraction fan, temperature and humidity tracking, and a custom plugin
+          for Ocotprint, a remote web-based management tool.
+        </strong>{" "}
+        The fan speed is controlled by a PID loop with sensor input from the
+        enclosure temperature sensor. This maintains the enclosure at an optimal
+        temperature while removing VOCs and ultrafine particles and venting them
+        to the outside.
+      </>
+    ),
+    skills: ["CAD", "Electronics","python" ],
     slides: [
       {
-        description: "3D Printer Enclosure",
+        description: "3D printer enclosure",
         src: require("../assets/Printer_Front.jpg"),
       },
       {
-        description: "3D Printer Enclosure Rear",
+        description: "3D printer enclosure custom electronics and fan.",
         src: require("../assets/Printer_Rear.jpg"),
+      },
+      {
+        description: "3D printer enclosure plugin",
+        src: require("../assets/Printer_Plugin.jpg"),
       },
     ],
     links: {

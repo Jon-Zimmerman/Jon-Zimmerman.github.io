@@ -96,7 +96,7 @@ export const styles = (theme) => ({
       marginLeft: "2rem",
     },
   },
-  aboutImage: {
+  modelContainer: {
     width: "35%",
     height: "35%",
     margin: " 1rem 3rem",

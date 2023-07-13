@@ -1,23 +1,24 @@
-//import logo from './logo.svg';
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//import './components/pages/home2/Home.js';
 
 import CssBaseline from "@mui/material/CssBaseline";
-import Home from "./components/pages/home/Home.tsx";
-//import About from "./components/pages/home/about/About.js";
-import Prototyping from "./components/pages/prototyping/Prototyping.js";
-
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { green } from "@mui/material/colors";
+import { Container } from "@mui/system";
 import NavBar from "./components/ui/navbar/Navbar.js";
 import Footer from "./components/ui/footer/Footer.js";
 import ScrollToTop from "./components/ui/scrollToTop/ScrollToTop.js";
 
-// import { styles } from "./App-style";
-// import useClasses from "./components/useClasses.js";
-
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { green } from "@mui/material/colors";
-import { Container } from "@mui/system";
+import Home from "./components/pages/home/Home.tsx";
+import RoboticsMentor from "./components/pages/roboticsMentor/RoboticsMentor.js";
+// import AnigramArm from "./components/pages/anigramArm/AnigramArm.tsx";
+// import HopperBot from "./components/pages/hopperBot/HopperBot.tsx";
+// import SpotMicro from "./components/pages/spotMicro/SpotMicro.tsx";
+// import CustomCNC from "./components/pages/customCNC/CustomCNC.tsx";
+// import SmartPrinter from "./components/pages/smartPrinter/SmartPrinter.tsx";
+// import Education from "./components/pages/education/Education.tsx";
+// import Software from "./components/pages/software/Software.tsx";
+// import Art from "./components/pages/art/Art.tsx";
 
 let initialTheme = false;
 //If the the value from the local storage equals to dark
@@ -27,10 +28,7 @@ if (localStorage.getItem("theme") === "dark") {
 }
 
 function App() {
-  //const classes = useClasses(styles);
   const [isDarkMode, setIsDarkMode] = useState(initialTheme);
-
-  //const { slides, title } = projectContent[0];
 
   const theme = createTheme({
     palette: {
@@ -59,43 +57,37 @@ function App() {
       <Router>
         <div className="App">
           <CssBaseline>
-            <NavBar
-              isDarkMode={isDarkMode}
-              setIsDarkMode={setIsDarkMode}
-      
-            />
+            <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <Container sx={{ paddingTop: "70px" }}>
               <Routes>
-                <Route 
-                exact 
-                path="/" 
-                element={<Home></Home>}></Route>
+                <Route exact path="/" element={<Home />}></Route>
                 <Route
                   exact
-                  path="/prototyping"
-                  element={<Prototyping />}
+                  path="/first-robotics-mentor"
+                  element={<RoboticsMentor />}
                 ></Route>
+                {/* <Route
+                  exact
+                  path="/granular-jamming-arm"
+                  element={<AnigramArm />}
+                ></Route>
+                <Route exact path="/hopperbot" element={<HopperBot />}></Route>
+                <Route exact path="/spot-micro" element={<SpotMicro />}></Route>
+
+                <Route exact path="/custom-cnc" element={<CustomCNC />}></Route>
                 <Route
                   exact
-                  path="/work-experience"
-                  element={<work-experience />}
+                  path="/smart-printer"
+                  element={<SmartPrinter />}
                 ></Route>
-                <Route
-                  exact
-                  path="/product-design"
-                  element={<product-design />}
-                ></Route>
-                <Route exact path="/software" element={<software />}></Route>
-                <Route exact path="/cad-3d-printing" element={<cad />}></Route>
-                <Route exact path="/art" element={<art />}></Route>
+
+                <Route exact path="/education" element={<Education />}></Route>
+                <Route exact path="/software" element={<Software />}></Route>
+  <Route exact path="/art" element={<Art />}></Route> */}
               </Routes>
             </Container>
 
-            <Footer
-              isDarkMode={isDarkMode}
-              setIsDarkMode={setIsDarkMode}
-     
-            />
+            <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <ScrollToTop showBelow={200} theme={isDarkMode} />
           </CssBaseline>
         </div>

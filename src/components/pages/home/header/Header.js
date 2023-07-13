@@ -65,7 +65,7 @@ const Home = (props) => {
   return (
     <Container>
       <div style={{ display: "flex" }} className={classes.home}>
-        <ThreeJSModel className={classes.aboutImage} />
+        <ThreeJSModel className={classes.modelContainer} />
 
         <div style={{ height: "100%" }} className={classes.container}>
           <AnimationName style={{ height: "100%" }} {...props} />

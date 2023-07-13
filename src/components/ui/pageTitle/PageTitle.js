@@ -10,10 +10,10 @@ const titleVariants = {
   visible: () => ({
     x: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
+    // transition: {
+    //   duration: 0.5,
+    //   ease: "easeInOut",
+    // },
   }),
 };
 
@@ -25,7 +25,7 @@ const Title = (props) => {
         className="title"
         component={motion.h2}
         variants={titleVariants}
-        initial="hidden"
+        //initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >

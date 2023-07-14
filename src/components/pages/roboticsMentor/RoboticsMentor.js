@@ -16,7 +16,7 @@ function RoboticsMentor() {
     <Container>
       <div>
         {" "}
-        <Title title={RoboticsMentorTitle} ></Title>
+        <Typography  className={classes.title}>{RoboticsMentorTitle}</Typography>
         <Typography className={classes.intro}>{RoboticsMentorIntro} </Typography>
         {RoboticsMentorSections.map((section) => (
           <PageCard section={section} />

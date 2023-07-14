@@ -1,7 +1,18 @@
+export const styles = (theme) => ({
+  intro: {
+    textAlign: "center",
 
-export const styles = theme => ({
+    fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontStyle: "normal",
+    fontWeight: "700 !important"
+  },
 
-    intro: {
-      textAlign: "center"
-      },
+  title: {
+    //fontWeight: "700 !important",
+    textAlign: "center",
+    fontSize: "2.6rem !important",
+    fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontStyle: "bold",
+    fontWeight: "700 !important"
+  },
 });

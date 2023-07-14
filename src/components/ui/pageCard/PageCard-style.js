@@ -3,11 +3,12 @@ export const styles = (theme) => ({
     display: "flex",
 
     margin: "3rem auto",
-    marginBottom: "2rem",
-    justifyContent: "center",
+    marginBottom: "8rem",
     alignItems: "center",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
+      marginBottom: "2rem",
+      justifyContent: "center",
     },
   },
   imageLeft: {
@@ -20,29 +21,56 @@ export const styles = (theme) => ({
       flexDirection: "row-reverse",
     },
   },
-  title: {
-    fontWeight: "600 !important",
-    fontSize: "1.65rem !important",
-  },
+
   contentWrapper: {
-    [theme.breakpoints.up("lg")]: {
-      display: "flex",
-      flexBasis: "45%",
-      flexDirection: "column",
-      justifyContent: "space-between",
-    },
+    display: "flex",
+    flexGrow: "1",
+    //flexBasis: "45%",
+    alignItems: "flex-end",
+    
   },
   cardContent: {
     //paddingBottom: "0px!important",
-  },
-  description: {
-    fontSize: "0.85rem!important",
+    maxWidth: "600px",
+    [theme.breakpoints.up("lg")]: {
+      maxWidth: "500px",
+    },
+    height: "auto",
+    marginTop: "1rem",
+    [theme.breakpoints.up("lg")]: {
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      marginTop: "0",
+    },
+    padding: "1rem",
+    paddingBottom: "2rem",
+    background: "#c4dbb4",
+
+    borderRadius: "25px",
   },
 
-  carouselContainer: {
+  textLeft: {
     [theme.breakpoints.up("lg")]: {
-      flexBasis: "67%",
+      marginRight: "4rem"
     },
+  },
+  textRight: {
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: "4rem"
+    },
+  },
+
+  subTitle: {
+    fontSize: "2rem!important",
+    fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontStyle: "italic",
+  },
+  description: {
+    fontSize: "0.95rem!important",
+    fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontStyle: "normal",
   },
 
   video: {
@@ -52,7 +80,7 @@ export const styles = (theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexGrow: 1,
+    flexGrow: "1",
   },
 
   videoBox: {
@@ -66,18 +94,25 @@ export const styles = (theme) => ({
   },
 
   imgContainer: {
-    height: "100%",
+    //height: "100%",
     display: "flex",
-
+    flexBasis: "70%",
+    //height: "100%",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-end",
     //maxHeight: "433px",
+    flexGrow: "2",
+    [theme.breakpoints.up("lg")]: {
+      alignSelf: "flex-end",
+    },
   },
   image: {
     // maxHeight: "430px",
-    width: "100%",
+    //width: "auto",
+    //height: "100%",
     maxWidth: "600px",
-    maxHeight: "500px",
+    //maxHeight: "500px",
+    borderRadius: "25px",
     [theme.breakpoints.up("lg")]: {
       maxWidth: "800px",
     },

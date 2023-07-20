@@ -37,13 +37,17 @@ export const PathStructure = [
       },
       {
         name: "Smart 3D Printer Enclosure",
-        href: "/3d-printer",
+        href: "/smart-printer",
       },
     ],
   },
   {
     name: "Education",
     href: "/education",
+  },  
+  {
+    name: "Software",
+    href: "/software",
   },
   {
     name: "Art",

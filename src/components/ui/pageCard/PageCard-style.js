@@ -7,27 +7,31 @@ export const styles = (theme) => ({
     alignItems: "center",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
-      marginBottom: "2rem",
+      marginBottom: "4rem",
       justifyContent: "center",
     },
   },
-  imageLeft: {
+  row: {
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
     },
   },
-  imageRight: {
+  rowReverse: {
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row-reverse",
     },
   },
-
+  imageLeft: {
+    justifyContent: "start !important",
+  },
+  imageRight: {
+    justifyContent: "end !important",
+  },
   contentWrapper: {
     display: "flex",
     flexGrow: "1",
     //flexBasis: "45%",
     alignItems: "flex-end",
-    
   },
   cardContent: {
     //paddingBottom: "0px!important",
@@ -45,7 +49,7 @@ export const styles = (theme) => ({
       marginTop: "0",
     },
     padding: "1rem",
-    paddingBottom: "2rem",
+    paddingBottom: "1.2rem",
     background: "#c4dbb4",
 
     borderRadius: "25px",
@@ -53,16 +57,16 @@ export const styles = (theme) => ({
 
   textLeft: {
     [theme.breakpoints.up("lg")]: {
-      marginRight: "4rem"
+      marginRight: "4rem",
     },
   },
   textRight: {
     [theme.breakpoints.up("lg")]: {
-      marginLeft: "4rem"
+      marginLeft: "4rem",
     },
   },
 
-  subTitle: {
+  cardHeader: {
     fontSize: "2rem!important",
     fontFamily: ["Playfair Display", "serif !important"].join(","),
     fontStyle: "italic",
@@ -113,8 +117,10 @@ export const styles = (theme) => ({
     maxWidth: "600px",
     //maxHeight: "500px",
     borderRadius: "25px",
+    width: "100%",
     [theme.breakpoints.up("lg")]: {
       maxWidth: "800px",
+      width: "unset",
     },
 
     " iframe": {
@@ -122,6 +128,19 @@ export const styles = (theme) => ({
       paddingTop: "22.5px",
     },
   },
+  // icon: {
+  //   paddingTop: "0px",	
+  //   paddingRight: "0px",
+  //   position: "absolute",
+  //   right:"20px",
+  //   top: "20px",
+  //   display: "none",
+  // },
+  // imageDiv: {
+  //   position: "relative",
+  //   display: "inline-block"
+  // }
+  
   // description: {
   //   position: "absolute",
   //   bottom: "0px",

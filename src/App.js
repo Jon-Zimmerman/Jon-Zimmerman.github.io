@@ -10,15 +10,15 @@ import Footer from "./components/ui/footer/Footer.js";
 import ScrollToTop from "./components/ui/scrollToTop/ScrollToTop.js";
 
 import Home from "./components/pages/home/Home.tsx";
-import RoboticsMentor from "./components/pages/roboticsMentor/RoboticsMentor.js";
-// import AnigramArm from "./components/pages/anigramArm/AnigramArm.tsx";
-// import HopperBot from "./components/pages/hopperBot/HopperBot.tsx";
-// import SpotMicro from "./components/pages/spotMicro/SpotMicro.tsx";
-// import CustomCNC from "./components/pages/customCNC/CustomCNC.tsx";
-// import SmartPrinter from "./components/pages/smartPrinter/SmartPrinter.tsx";
-// import Education from "./components/pages/education/Education.tsx";
-// import Software from "./components/pages/software/Software.tsx";
-// import Art from "./components/pages/art/Art.tsx";
+import RoboticsMentor from "./components/pages/projectPages/RoboticsMentor.js";
+import AnigramArm from "./components/pages/projectPages/AnigramArm.js";
+import HopperBot from "./components/pages/projectPages/HopperBot.js";
+import SpotMicro from "./components/pages/projectPages/SpotMicro.js";
+import CustomCNC from "./components/pages/projectPages/CustomCNC.js";
+import SmartPrinter from "./components/pages/projectPages/SmartPrinter.js";
+import Education from "./components/pages/projectPages/Education.js";
+import Software from "./components/pages/projectPages/Software.js";
+import Art from "./components/pages/projectPages/Art.js";
 
 let initialTheme = false;
 //If the the value from the local storage equals to dark
@@ -66,24 +66,22 @@ function App() {
                   path="/first-robotics-mentor"
                   element={<RoboticsMentor />}
                 ></Route>
-                {/* <Route
+                <Route
                   exact
                   path="/granular-jamming-arm"
                   element={<AnigramArm />}
                 ></Route>
-                <Route exact path="/hopperbot" element={<HopperBot />}></Route>
+                 <Route exact path="/hopperbot" element={<HopperBot />}></Route>
                 <Route exact path="/spot-micro" element={<SpotMicro />}></Route>
-
                 <Route exact path="/custom-cnc" element={<CustomCNC />}></Route>
                 <Route
                   exact
                   path="/smart-printer"
                   element={<SmartPrinter />}
                 ></Route>
-
                 <Route exact path="/education" element={<Education />}></Route>
                 <Route exact path="/software" element={<Software />}></Route>
-  <Route exact path="/art" element={<Art />}></Route> */}
+                <Route exact path="/art" element={<Art />}></Route>
               </Routes>
             </Container>
 

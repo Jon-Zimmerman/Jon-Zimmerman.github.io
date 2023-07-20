@@ -16,9 +16,9 @@ const About = () => {
   const classes = useClasses(styles);
   const handleClick = event => {
     // 👇️ refers to the image element
-    console.log(event.target);
+    //console.log(event.target);
 
-    console.log('Image clicked');
+    //console.log('Image clicked');
   };
   return (
     <Container id="about" name="about">

@@ -19,7 +19,7 @@ const PageCard = (props) => {
   const mobile = useMediaQuery(theme.breakpoints.down("lg"));
   const [modalOpen, setModalOpen] = React.useState(false);
   const [index, setIndex] = React.useState(0);
-  console.log(section);
+  //console.log(section);
   var flexDirection =
     section.imageFloat === "left" ? classes.row : classes.rowReverse;
   var imageFloat =

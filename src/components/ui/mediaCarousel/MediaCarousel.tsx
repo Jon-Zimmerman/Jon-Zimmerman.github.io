@@ -46,7 +46,7 @@ const MediaCarousel = (props) => {
   };
   const updateIndex = ({ index: current }: { index: number }) => {
     setIndex(current);
-    console.log(current);
+    //console.log(current);
   };
 
   return (

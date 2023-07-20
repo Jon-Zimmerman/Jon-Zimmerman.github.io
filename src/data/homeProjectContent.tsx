@@ -210,7 +210,7 @@ export const projectContent = [
       },
     ],
     links: {
-      url: "/3d-printer",
+      url: "/smart-printer",
     },
   },
   {
@@ -246,7 +246,7 @@ export const projectContent = [
       },
     ],
     links: {
-      url: "/3d-printer",
+      url: "/spot-micro",
     },
   },
 ];

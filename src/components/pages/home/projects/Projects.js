@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import ProjectCard from "./projectCard/ProjectCard";
-import Title from "../../../ui/pageTitle/PageTitle.js";
-import { projectContent } from "../../../../data/projectContent.tsx";
+import Title from "../SectionTitle.js";
+import { projectContent } from "../../../../data/homeProjectContent.tsx";
 
 const Projects = (props) => {
 

@@ -1,30 +1,35 @@
 import React, { useRef, Suspense } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
-import {
-  Environment,
-
-  ContactShadows,
-  OrbitControls,
-
-} from "@react-three/drei";
+import { Environment, ContactShadows, OrbitControls } from "@react-three/drei";
 import { LayerMaterial, Color, Depth, Noise } from "lamina";
-
 
 import { useGLTF } from "@react-three/drei";
 
 import { styles } from "./ThreeJSModel-style";
 import useClasses from "../../../../useClasses.js";
 
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@emotion/react";
+
+
 const ThreeJSModel = () => {
   const ref = useRef();
   const classes = useClasses(styles);
-  const { nodes } = useGLTF("/Arm.glb");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("md"));
+  var modelFilepath = "";
+  if (mobile) {
+    modelFilepath = "/Arm_Low_Poly.glb";
+  } else {
+    modelFilepath = "/Arm_Low_Poly.glb";
+  }
+  const { nodes } = useGLTF(modelFilepath);
   return (
     <Canvas
       className={classes.canvas}
       shadows
-      dpr={[1, 2]}
+      dpr={[0.5, 2]}
       camera={{ position: [180, 53, 60], fov: 40 }}
     >
       <Suspense fallback={null}>
@@ -33,12 +38,12 @@ const ThreeJSModel = () => {
         <pointLight intensity={2} position={[30, 30, 5]} />
         <ambientLight intensity={4} />
         <group position={[0, -1.5, 0]}>
-          <Suspense fallback={null}>
+          <Suspense fallback={<h4>Loading...</h4>}>
             <mesh
-              castShadow
-              receiveShadow
-              position={[0, -60, -20]}
-              rotation={[0, -1.6, 0]}
+              //castShadow
+              //receiveShadow
+              position={[10, -65, -33]}
+              rotation={[0, -1.95, 0]}
               geometry={nodes.Asset3DLoadersceneRoot.geometry}
               material={nodes.Asset3DLoadersceneRoot.material}
             >

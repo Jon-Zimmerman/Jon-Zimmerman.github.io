@@ -9,7 +9,7 @@ import {
 import styles from "./Experience-style";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import jobs from "../../../../data/experienceContent.js";
-import Title from "../../../ui/pageTitle/PageTitle.js";
+import Title from "../SectionTitle.js";
 
 import useClasses from "../../../useClasses.js";
 const Experience = () => {

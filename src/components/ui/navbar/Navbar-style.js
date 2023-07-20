@@ -10,7 +10,7 @@ export const styles = (theme) => ({
     top: "0px",
     fontWeight: "600 !important",
     cursor: "pointer",
-    color: theme.palette.mode === "dark" ? "#ffffff" : "#000",
+    color: theme.palette.mode === "dark" ? "#fff" : "#000",
     textDecoration: "none",
     [theme.breakpoints.up("md")]: {
       "&:hover": {
@@ -88,10 +88,11 @@ export const styles = (theme) => ({
     },
 
     "a:hover": {
-      backgroundColor: "#f5f5f5",
+
+      //backgroundColor: theme.palette.mode === "light" ? "#f5f5f5" : "#000" ,
     },
     "button:hover": {
-      backgroundColor: "#f5f5f5",
+      //backgroundColor: theme.palette.mode === "light" ? "#f5f5f5" : "#000" ,
     },
   },
 
@@ -131,7 +132,8 @@ export const styles = (theme) => ({
     listStyle: "none",
     marginTop: "0px",
     paddingBottom: "0.6rem",
-    backgroundColor: "#fff",
+
+    backgroundColor: theme.palette.mode === "light" ? "#fff" : "#000" ,
     borderRadius: "0.5rem",
     display: "none",
     "&.show": {

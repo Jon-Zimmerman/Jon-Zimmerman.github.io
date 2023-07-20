@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 
 import { styles } from "./About-style";
-import Title from "../../../ui/pageTitle/PageTitle.js";
+import Title from "../SectionTitle.js";
 import aboutMeImage from "../../../../assets/About_Me_4.png";
 import useClasses from "../../../useClasses.js";
 import {

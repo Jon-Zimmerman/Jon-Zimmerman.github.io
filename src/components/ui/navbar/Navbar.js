@@ -132,6 +132,7 @@ const Navbar = (props) => {
                     </ListItem>
                   ))}
                 </List>
+                <Divider variant="middle" />
               </React.Fragment>
             ) : (
               <React.Fragment key={item.name}>

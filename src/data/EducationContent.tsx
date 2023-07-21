@@ -38,13 +38,13 @@ export const sections = [
   {
     id: 0,
     imageFloat: "right",
-    imageHeight: 400,
+    imageHeight: 425,
     cardHeader: " Ohio State Formula SAE",
     description: (
       <>
         I independently designed mounting plates for the electrical harness and
-        assembled chassis components such as steel support arms for the suspension
-        system as well as carbon fiber wheel components.
+        assembled chassis components such as steel support arms for the
+        suspension system as well as carbon fiber wheel components.
       </>
     ),
 
@@ -59,6 +59,29 @@ export const sections = [
   {
     id: 1,
     imageFloat: "left",
+    imageHeight: 350,
+    cardHeader: "RFID Tag Launching Alarm Clock ",
+    description: (
+      <>
+        This alarm clock prototype included a servo motor that would launch an
+        RFID-equiped ball into the room when the alarm goes off, forcing the
+        user to get out of bed thus increasing the likelihood of them staying
+        awake. Additionally the lamp shows the real weather conditions via a
+        WiFi module and an led strip.
+      </>
+    ),
+
+    image: [
+      {
+        description: "",
+
+        src: require("../assets/rfid_alarm_clock.jpg"),
+      },
+    ],
+  },
+  {
+    id: 1,
+    imageFloat: "right",
     imageHeight: 425,
     cardHeader: "Reverse Engineering Project ",
     description: (
@@ -79,8 +102,8 @@ export const sections = [
   },
   {
     id: 2,
-    imageFloat: "right",
-    imageHeight: 550,
+    imageFloat: "left",
+    imageHeight: 500,
     cardHeader: "Spring Testing Machine",
     description: (
       <>
@@ -102,7 +125,7 @@ export const sections = [
   },
   {
     id: 2,
-    imageFloat: "left",
+    imageFloat: "right",
     imageHeight: 400,
     cardHeader: "Airfoil Design",
     description: (

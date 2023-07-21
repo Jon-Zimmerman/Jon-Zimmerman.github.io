@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import CssBaseline from "@mui/material/CssBaseline";
@@ -8,6 +9,9 @@ import { Container } from "@mui/system";
 import NavBar from "./components/ui/navbar/Navbar.js";
 import Footer from "./components/ui/footer/Footer.js";
 import ScrollToTop from "./components/ui/scrollToTop/ScrollToTop.js";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 
 import Home from "./components/pages/home/Home.tsx";
 import RoboticsMentor from "./components/pages/projectPages/RoboticsMentor.js";
@@ -26,6 +30,24 @@ if (localStorage.getItem("theme") === "dark") {
   //Set initial theme value to true, that means dark theme
   initialTheme = true;
 }
+
+
+function ScrollRestore() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", 
+    });
+  }, [pathname]);
+
+  return null;
+}
+
+
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(initialTheme);
@@ -55,11 +77,13 @@ function App() {
     <ThemeProvider theme={theme}>
       theme = responsiveFontSizes(theme);
       <Router>
+        <ScrollRestore/>
         <div className="App">
           <CssBaseline>
             <NavBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             <Container sx={{ paddingTop: "70px" }}>
               <Routes>
+
                 <Route exact path="/" element={<Home />}></Route>
                 <Route
                   exact

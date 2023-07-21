@@ -1,15 +1,14 @@
-
 import { styles } from "./AnimatedName-style";
-import useClasses from "../../../../../components/useClasses.js"
+import useClasses from "../../../../../components/useClasses.js";
 
 //import { useTheme } from '@emotion/react';
-import { Typography } from '@mui/material';
-
+import { Typography } from "@mui/material";
 
 import {
-  createTheme, responsiveFontSizes,
+  createTheme,
+  responsiveFontSizes,
   ThemeProvider,
-} from '@mui/material/styles';
+} from "@mui/material/styles";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 //import AnimatedText from "./AnimatedText";
@@ -23,7 +22,7 @@ const Wrapper = (props) => {
 const tagMap = {
   paragraph: "p",
   name1: "h1",
-  name2: "h1"
+  name2: "h1",
 };
 const AnimatedCharacters = (props) => {
   let theme = createTheme();
@@ -32,15 +31,15 @@ const AnimatedCharacters = (props) => {
   // Framer Motion variant object, for controlling animation
   const item = {
     hidden: {
-      y: "100%",
-
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.9 }
+      //y: "100%",
+      opacity: "0%",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.2 },
     },
     visible: {
-      y: 0,
-
-      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.0 }
-    }
+      //y: 0,
+      opacity: "100%",
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 1.0 },
+    },
   };
 
   //  Split each word of props.text into an array
@@ -72,7 +71,6 @@ const AnimatedCharacters = (props) => {
               return (
                 <span
                   style={{
-
                     overflow: "hidden",
                     display: "inline-block",
                     margin: 0,
@@ -80,23 +78,24 @@ const AnimatedCharacters = (props) => {
                   key={index}
                 >
                   <motion.span
-                    style={{ display: "inline-block", margin: 0, }}
+                    style={{ display: "inline-block", margin: 0 }}
                     variants={item}
-                    
                   >
                     <ThemeProvider theme={theme}>
                       <Typography
                         variant="h1"
-                        style={{ display: "inline-block", margin: 0, fontWeight: "500",}}
+                        style={{
+                          display: "inline-block",
+                          margin: 0,
+                          fontWeight: "500",
+                        }}
                         variants={item}
-                        
-                      //className={classes.h1}
+
+                        //className={classes.h1}
                       >
                         {element}
                       </Typography>
                     </ThemeProvider>
-
-
                   </motion.span>
                 </span>
               );
@@ -111,7 +110,6 @@ const AnimatedCharacters = (props) => {
 const AnimatedName = () => {
   const classes = useClasses(styles);
 
-
   const [replay] = useState(true);
   // Placeholder text data, as if from API
   const placeholderText = [
@@ -121,13 +119,13 @@ const AnimatedName = () => {
   const container = {
     visible: {
       transition: {
-        staggerChildren: 0.025
-      }
-    }
+        staggerChildren: 0.05,
+      },
+    },
   };
   return (
     <div className={classes.wrapper}>
-      <motion.div 
+      <motion.div
         className={classes.container}
         initial="hidden"
         // animate="visible"
@@ -136,10 +134,9 @@ const AnimatedName = () => {
       >
         <div className={classes.wordWrapper}>
           {placeholderText.map((item, index) => {
-            return <AnimatedCharacters  {...item} key={index} />;
+            return <AnimatedCharacters {...item} key={index} />;
           })}
         </div>
-
       </motion.div>
     </div>
   );

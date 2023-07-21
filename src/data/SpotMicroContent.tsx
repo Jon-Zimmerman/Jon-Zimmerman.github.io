@@ -102,7 +102,7 @@ export const sections = [
   {
     id: 2,
     imageFloat: "right",
-    imageHeight: 450,
+    imageHeight: 375,
     cardHeader: "Construction",
     description: (
       <>
@@ -124,7 +124,7 @@ export const sections = [
   {
     id: 2,
     imageFloat: "left",
-    imageHeight: 500,
+    imageHeight: 600,
     cardHeader: "Finished Robot",
     description: (
       <>

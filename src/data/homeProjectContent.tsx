@@ -95,6 +95,10 @@ export const projectContent = [
       {
         description: "Robot Arm Finished",
         src: require("../assets/AniGram_Arm_Finished.jpg"),
+      },      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=Ikw7pUl9Z5E",
+        videoId: "Ikw7pUl9Z5E",
       },
       {
         description: "Robot Hand with Granular Jamming Areas",
@@ -116,8 +120,9 @@ export const projectContent = [
         description: "Robot Arm Hand Interface Belt Setup",
         src: require("../assets/AniGram_Arm_Belt.jpg"),
       },
+
       {
-        description: "Robot Arm Hand Interface Belt Setup",
+        description: "Robot Arm Vision System",
         src: require("../assets/AniGram_Arm_Vision_System.JPG"),
       },
     ],
@@ -135,6 +140,11 @@ export const projectContent = [
       {
         description: "HopperBot Delivery Robot Concept",
         src: require("../assets/HopperBot_Render.webp"),
+      },      
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=KSGEKOYDzTs",
+        videoId: "KSGEKOYDzTs",
       },
       {
         description: "HopperBot Tech",
@@ -147,7 +157,7 @@ export const projectContent = [
       {
         description: "HopperBot Electrical",
         src: require("../assets/HopperBot_Electrical.webp"),
-      },
+      },  
     ],
     links: {
       url: "/hopperbot",
@@ -167,6 +177,11 @@ export const projectContent = [
       {
         description: "Custom CNC Toolpath",
         src: require("../assets/CNC_Toolpath.webp"),
+      },
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
+        videoId: "0xI43rbJjB0",
       },
       {
         description: 'Custom CNC mountain cut from a 2" piece of wood',
@@ -228,15 +243,18 @@ export const projectContent = [
     skills: ["CAD", "3D Printing", "Electronics", "Arduino", "C/C++"],
     slides: [
       {
-        description: "Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
+        description:
+          "Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
         src: require("../assets/Spot_Micro_CAD.PNG"),
       },
       {
-        description: "Close up of leg design with secondary motor 4 bar to allow for motor to be more concealed and protected.",
+        description:
+          "Close up of leg design with secondary motor 4 bar to allow for motor to be more concealed and protected.",
         src: require("../assets/Spot_Micro_Leg.PNG"),
       },
       {
-        description: "This part was cut on my custom build CNC to ensire precise hole aligment and overall shape to fit within the 3d printed shell.",
+        description:
+          "This part was cut on my custom build CNC to ensire precise hole aligment and overall shape to fit within the 3d printed shell.",
         src: require("../assets/CNC_Finished_Part.jpg"),
       },
       {

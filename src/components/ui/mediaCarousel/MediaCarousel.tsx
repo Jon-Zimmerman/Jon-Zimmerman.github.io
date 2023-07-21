@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { styles } from "./MediaCarousel-style";
-import YoutubeVideo from "../YoutubeEmbed/YoutubeVideo";
+
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
@@ -18,9 +18,14 @@ import Counter from "yet-another-react-lightbox/plugins/counter";
 import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
+//import YoutubeVideo from "../YoutubeEmbed/YoutubeVideo";
 
-import { Lightbox, Slide, YoutubeSlide } from "yet-another-react-lightbox";
+import { Slide, YoutubeSlide } from "yet-another-react-lightbox";
+const YoutubeVideo = React.lazy(() => import('../YoutubeEmbed/YoutubeVideo'));
 
+const Lightbox = React.lazy(
+  () => import('yet-another-react-lightbox').then(module => ({ default: module.Lightbox }))
+);
 
 function isCustomSlide(slide: Slide): slide is YoutubeSlide {
   return slide.type === "custom-slide";

@@ -1,4 +1,4 @@
-import ThreeJSModel from "./threeJS/ThreeJSModel.js";
+import React from "react";
 import AnimationName from "./animatedName/AnimatedName";
 import { Container, Typography } from "@mui/material";
 import { motion } from "framer-motion";
@@ -11,13 +11,14 @@ import { styles } from "./Header-style";
 import useClasses from "../../../../components/useClasses.js";
 
 
+const ThreeJSModel = React.lazy(() => import('./threeJS/ThreeJSModel.js'));
 const textVariants = {
   hidden: {
     opacity: 0,
   },
   visible: {
     opacity: 1,
-    transition: { ease: "easeOut", delay: 1.2, duration: 1.2 },
+    transition: { ease: "easeOut", delay: 0.0, duration: 1.2 },
   },
 };
 
@@ -27,7 +28,7 @@ const buttonVariants = {
   },
   visible: {
     opacity: 1,
-    transition: { ease: "easeOut", delay: 1.2, duration: 1.2 },
+    transition: { ease: "easeOut", delay: 0.0, duration: 1.2 },
   },
 };
 
@@ -65,7 +66,7 @@ const Home = (props) => {
   return (
     <Container>
       <div style={{ display: "flex" }} className={classes.home}>
-        <ThreeJSModel className={classes.modelContainer} />
+        <ThreeJSModel className={classes.modelContainer} /> 
 
         <div style={{ height: "100%" }} className={classes.container}>
           <AnimationName style={{ height: "100%" }} {...props} />

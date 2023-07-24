@@ -3,6 +3,7 @@ export const styles = (theme) => ({
     textAlign: "center",
 
     fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontSize: "1.1rem !important",
     fontStyle: "normal",
     fontWeight: "500 !important"
   },

@@ -3,15 +3,7 @@ export const styles = (theme) => ({
     objectFit: "contain",
     height: "100%",
   },
-  carouselContainer: {
-    [theme.breakpoints.up("lg")]: {
-      
-      flexBasis: "67%"
-      
-    },
-    
-  },  
-  
+
   video: {
     width: "10vw",
     height: "auto!important",
@@ -20,6 +12,9 @@ export const styles = (theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexGrow: 1,
+    [theme.breakpoints.down("lg")]: {
+      width: "50vw",
+    },
   },
 
   videoBox: {
@@ -29,7 +24,9 @@ export const styles = (theme) => ({
     justifyContent: "center",
     width: "95%",
     height: "95%",
-    margin: "0",
+    margin: "0",    
+    alignSelf: "center",
+   
   },
 
   arrows: {
@@ -59,7 +56,7 @@ export const styles = (theme) => ({
     height: "100%",
     //maxHeight: "433px",
   },
-  carousel: {
+  projectCarousel: {
     // maxHeight: "430px",
     display: "flex",
 
@@ -91,8 +88,13 @@ export const styles = (theme) => ({
         maxHeight: "433px!important",
       },
     },
-    ".slider-wrapper": {
-      //maxHeight: "433px!important",
+  },
+  carousel: {
+    " .control-dots": {
+      display: "none",
+    },
+    " .carousel-status": {
+      display: "none",
     },
   },
   description: {
@@ -103,6 +105,22 @@ export const styles = (theme) => ({
     width: "100%",
     background: "#00000094",
     color: "#ffffff",
+    padding: "10px",
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      bottom: "0px",
+      position: "relative",
+    },
+  },  
+  descriptionPage: {
+    position: "absolute",
+    bottom: "0px",
+    paddingTop: "10px",
+    left: "0",
+    margin: 0,
+    width: "100%",
+    background: "#00000094",
+    color:  theme.palette.mode === "dark" ? "#ffffff" : "#000",
     padding: "10px",
     textAlign: "center",
     [theme.breakpoints.down("md")]: {

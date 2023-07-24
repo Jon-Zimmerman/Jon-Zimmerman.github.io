@@ -7,7 +7,7 @@ export const intro = (
     <strong> C/C++ </strong>(robotics, Arduino), <strong>C#</strong> (WinForm
     Applications), <strong>Java</strong> (FRC Robotics Mentoring),<strong> Javascript, React.js, MUI, CSS, HTML </strong> 
      (work experience and personal portfolio development), <strong> Python </strong>
-    (robotics, scripting), <strong> Matlab, Simulink </strong> (work experience).
+    (robotics, scripting), <strong> Matlab, and Simulink </strong> (work experience).
   </>
 );
 
@@ -15,7 +15,7 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 325,
+    maxWidth: 500,
     cardHeader: "This Website! ",
     description: (
       <>
@@ -27,33 +27,22 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: "",
 
         src: require("../assets/Website_Desktop.JPG"),
+      },      {
+        description: "",
+
+        src: require("../assets/Website_Mobile.JPG"),
       },
     ],
   },
-  // {
-  //   id: 0,
-  //   imageFloat: "right",
-  //   imageHeight: 350,
-  //   cardHeader: " ",
-  //   description: <></>,
-
-  //   image: [
-  //     {
-  //       description: " ",
-
-  //       src: require("../assets/Website_Mobile.JPG"),
-  //     },
-  //   ],
-  // },
   {
     id: 1,
     imageFloat: "right",
-    imageHeight: 400,
+    maxWidth: 450,
     cardHeader: "Custom 3D Printer Enclosure Plugin ",
     description: (
       <>
@@ -70,7 +59,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: "",
 
@@ -79,9 +68,9 @@ export const sections = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     imageFloat: "left",
-    imageHeight: 400,
+    maxWidth: 500,
     cardHeader: "Robot Arm Motion Control and Vision System ",
     description: (
       <>
@@ -95,7 +84,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: "",
 

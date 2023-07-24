@@ -1,16 +1,17 @@
-
-export const styles = theme => ({
+export const styles = (theme) => ({
   chip: {
-    margin: "0.1rem",
+    margin: "0.2rem",
+    marginLeft: "0.0rem",
     color: "white",
   },
   allChips: {
     margin: "0.5rem 0.3rem",
+    marginLeft: "0px",
   },
   card: {
     margin: "3rem auto",
     marginBottom: "5rem",
-    
+
     [theme.breakpoints.up("lg")]: {
       display: "flex",
       flexDirection: "row-reverse",
@@ -18,14 +19,12 @@ export const styles = theme => ({
   },
   title: {
     fontWeight: "600 !important",
-    fontSize: "1.65rem !important"
+    fontSize: "1.65rem !important",
   },
   contentWrapper: {
-    
-    
     [theme.breakpoints.up("lg")]: {
       display: "flex",
-      flexBasis: "33%",
+      //flexBasis: "33%",
       flexDirection: "column",
       justifyContent: "space-between",
     },
@@ -33,10 +32,11 @@ export const styles = theme => ({
   cardContent: {
     paddingBottom: "0px!important",
   },
-  description:{
+  description: {
     fontSize: "0.80rem!important",
   },
   MediaCarousel: {
-    width:"70%"
-  }
+    width: "100%",
+  },
+  
 });

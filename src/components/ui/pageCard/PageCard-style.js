@@ -2,16 +2,15 @@ export const styles = (theme) => ({
   card: {
     display: "flex",
 
-    margin: "3rem auto",
-    marginBottom: "8rem",
     alignItems: "center",
     [theme.breakpoints.down("lg")]: {
       flexDirection: "column",
-      marginBottom: "4rem",
+      marginBottom: "3rem",
       justifyContent: "center",
     },
   },
   row: {
+    
     [theme.breakpoints.up("lg")]: {
       flexDirection: "row",
     },
@@ -30,16 +29,9 @@ export const styles = (theme) => ({
   contentWrapper: {
     display: "flex",
     flexGrow: "1",
-    //flexBasis: "45%",
-    alignItems: "flex-end",
+    justifyContent: "flex-end",
   },
   cardContent: {
-    //paddingBottom: "0px!important",
-    maxWidth: "600px",
-    [theme.breakpoints.up("lg")]: {
-      maxWidth: "500px",
-    },
-    height: "auto",
     marginTop: "1rem",
     [theme.breakpoints.up("lg")]: {
       display: "flex",
@@ -57,12 +49,12 @@ export const styles = (theme) => ({
 
   textLeft: {
     [theme.breakpoints.up("lg")]: {
-      marginRight: "4rem",
+      marginRight: "6rem",
     },
   },
   textRight: {
     [theme.breakpoints.up("lg")]: {
-      marginLeft: "4rem",
+      marginLeft: "6rem",
     },
   },
 
@@ -77,83 +69,29 @@ export const styles = (theme) => ({
     fontStyle: "normal",
   },
 
-  video: {
-    width: "10vw",
-    height: "auto!important",
-    aspectRatio: "16/9!important",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: "1",
-  },
-
-  videoBox: {
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "95%",
-    height: "95%",
-    margin: "0",
-  },
-
   imgContainer: {
-    //height: "100%",
-    display: "flex",
-    flexBasis: "70%",
-    //height: "100%",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    //maxHeight: "433px",
-    flexGrow: "2",
-    [theme.breakpoints.up("lg")]: {
-      alignSelf: "flex-end",
+    " img": {
+      borderRadius: "25px",
     },
   },
-  image: {
-    // maxHeight: "430px",
-    //width: "auto",
-    //height: "100%",
-    maxWidth: "600px",
-    //maxHeight: "500px",
-    borderRadius: "25px",
-    width: "100%",
-    [theme.breakpoints.up("lg")]: {
-      maxWidth: "800px",
-      width: "unset",
+  imgContainerNoCaption: {
+    " p": {
+      position: "relative",
+      backgroundColor: "transparent",
+   
+      height: "2.5rem",
     },
-
-    " iframe": {
-      paddingBottom: "22.5px",
-      paddingTop: "22.5px",
+    " img": {
+      borderRadius: "25px",
+    },
+    " .slide": {
+      display: "flex",
+      justifyContent: "center",
+      paddingTop: "40px",
     },
   },
-  // icon: {
-  //   paddingTop: "0px",	
-  //   paddingRight: "0px",
-  //   position: "absolute",
-  //   right:"20px",
-  //   top: "20px",
-  //   display: "none",
-  // },
-  // imageDiv: {
-  //   position: "relative",
-  //   display: "inline-block"
-  // }
-  
-  // description: {
-  //   position: "absolute",
-  //   bottom: "0px",
-  //   left: "0",
-  //   margin: 0,
-  //   width: "100%",
-  //   background: "#00000094",
-  //   color: "#ffffff",
-  //   padding: "10px",
-  //   textAlign: "center",
-  //   [theme.breakpoints.down("md")]: {
-  //     bottom: "0px",
-  //     position: "relative",
-  //   },
-  // },
+  lowerDescription: {
+    display: "block !important",
+    textAlign: "center",
+  },
 });

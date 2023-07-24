@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  IconButton,
+  Button,
   SwipeableDrawer,
   Divider,
   List,
@@ -28,7 +28,7 @@ const navVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.25,
       ease: "easeInOut",
     },
   },
@@ -73,9 +73,9 @@ const Navbar = (props) => {
           <NavMenu item={item} key={index} />
         ))}
         <DarkModeSwitch {...props} />
-        <IconButton className={classes.menuIcon} onClick={() => setOpen(true)}>
+        <Button className={classes.menuIcon} onClick={() => setOpen(true)}>
           <MenuIcon />
-        </IconButton>
+        </Button>
       </Toolbar>
       <SwipeableDrawer
         anchor="right"
@@ -89,9 +89,9 @@ const Navbar = (props) => {
           role="button"
           tabIndex={0}
         >
-          <IconButton>
-            <ChevronRightIcon />
-          </IconButton>
+          <Button>
+            <ChevronRightIcon className={classes.menuIcon} />
+          </Button>
         </div>
         <Divider />
         <List>
@@ -126,6 +126,7 @@ const Navbar = (props) => {
                         variants={linkVariants}
                         initial="hidden"
                         animate="visible"
+                        onClick={() => setOpen(false)}
                       >
                         {subItem.name}
                       </Link>

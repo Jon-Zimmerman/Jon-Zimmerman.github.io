@@ -17,7 +17,51 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 600,
+    maxWidth: 650,
+    cardHeader: "CAD Model ",
+    description: (
+      <>
+        I created the model of the enclosure in Fusion 360. This design was
+        created to be close to air tight, easy to disassemble, and aesthetically
+        appealing.
+      </>
+    ),
+
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/Printer_Render.png"),
+      },
+    ],
+  },
+  {
+    id: 1,
+    imageFloat: "right",
+    maxWidth: 650,
+    cardHeader: "Fan and Vent CAD Model ",
+    description: (
+      <>
+        The fan for this system removes fumes and ultrafine particles via an
+        attached flexible ducting, while also acting as part of a closed loop
+        temperature control system. All but 2 of the pieces shown can be removed
+        without tools thanks to clever sliding and locking geometry features.
+        This makes it much easier to transport the system.
+      </>
+    ),
+
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/Fan_Render.JPG"),
+      },
+    ],
+  },
+  {
+    id: 2,
+    imageFloat: "left",
+    maxWidth: 500,
     cardHeader: "Finished Build ",
     description: (
       <>
@@ -29,7 +73,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: "",
 
@@ -38,13 +82,22 @@ export const sections = [
     ],
   },
   {
-    id: 0,
+    id: 3,
     imageFloat: "right",
-    imageHeight: 400,
+    maxWidth: 400,
     cardHeader: "Electronics ",
-    description: <>The printer and enclosure are controlled by a Raspberry Pi 3 running OctoPi, an open source 3D printing software. I created a custom electronics board that connects an arduino to the Raspberry Pi, power, the fan, sensors, and the LED strip in a very small form factor. I also created custom parts to mount all the components and adapt the fan to the exhaust tubing.</>,
+    description: (
+      <>
+        The printer and enclosure are controlled by a Raspberry Pi 3 running
+        OctoPi, an open source 3D printing software. I created a custom
+        electronics board that connects an arduino to the Raspberry Pi, power,
+        the fan, sensors, and the LED strip in a very small form factor. I also
+        created custom parts to mount all the components and adapt the fan to
+        the exhaust tubing.
+      </>
+    ),
 
-    image: [
+    slides: [
       {
         description: " ",
 
@@ -53,18 +106,30 @@ export const sections = [
     ],
   },
   {
-    id: 1,
+    id: 4,
     imageFloat: "left",
-    imageHeight: 400,
+    maxWidth: 400,
     cardHeader: "Custom Python Plugin ",
-    description: <>I wrote a custom python plugin to connect the enclosure with the OctoPi API. This allows for access to the controls of the enclosure through the OcotPi web portal. In combination with remote camera monitoring its possible to adjust settings from any internet connected device to optimize the print in real time. This system includes control over the interior ambient leds using a pre-filled color pallet, control over the target setpoint and information about the current temperature, fan speed, and humidity. These values are retrieved over a custom serial interface from the Arduino.</>,
+    description: (
+      <>
+        I wrote a custom python plugin to connect the enclosure with the OctoPi
+        API. This allows for access to the controls of the enclosure through the
+        OcotPi web portal. In combination with remote camera monitoring its
+        possible to adjust settings from any internet connected device to
+        optimize the print in real time. This system includes control over the
+        interior ambient leds using a pre-filled color pallet, control over the
+        target setpoint and information about the current temperature, fan
+        speed, and humidity. These values are retrieved over a custom serial
+        interface from the Arduino.
+      </>
+    ),
 
-    image: [
+    slides: [
       {
-        description: "Plugin",
+        description: "",
 
         src: require("../assets/Printer_Plugin.jpg"),
       },
     ],
   },
-]
+];

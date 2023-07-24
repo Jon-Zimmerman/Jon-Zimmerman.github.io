@@ -1,33 +1,38 @@
 import React from "react";
 declare var require: any;
 export const title = "Animatronic Granular Jamming Robotic Arm";
-export const intro = <> This robot was designed as an experiment to investigate the practicality
-of granular jamming for use in the entertainment industry as a highly
-interactive animatronic.</>;
+export const intro = (
+  <>
+    {" "}
+    This robot was designed as an experiment to investigate the practicality of
+    granular jamming for use in the entertainment industry as a highly
+    interactive animatronic.
+  </>
+);
 
 export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 500,
+    maxWidth: 500,
     cardHeader: "Intro ",
     description: (
       <>
-        The system included 7 degreees of freedom with
-        smooth motion from stepper motors, clever mechanisms to package within
-        the tight confines of the arm, and a vision system for identifying
-        objects placed in front of the robot. The entire robot including
-        prototypes, motors, material, and electronics was built for under $1000.
-        Most importantly the robot took advantage of a technology called
-        granular jamming to enable the robot to pick objects like a large coin,
-        a toy ball or food items. These items served to show that the robot is
-        very universal in its application.
+        The system included 7 degreees of freedom with smooth motion from
+        stepper motors, clever mechanisms to package within the tight confines
+        of the arm, and a vision system for identifying objects placed in front
+        of the robot. The entire robot including prototypes, motors, material,
+        and electronics was built for under $1000. Most importantly the robot
+        took advantage of a technology called granular jamming to enable the
+        robot to pick objects like a large coin, a toy ball or food items. These
+        items served to show that the robot is very universal in its
+        application.
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Arm",
+        description: "",
         src: require("../assets/AniGram_Arm_Frame.png"),
       },
     ],
@@ -35,23 +40,51 @@ export const sections = [
   {
     id: 1,
     imageFloat: "right",
-    imageHeight: 350,
-    cardHeader: "Finished robot ",
+    maxWidth: 550,
+    cardHeader: "Finished Robot ",
     description: (
-      <>Finished robot model in the lab attached to a test structure.</>
+      <>
+        Finished robot model in the lab attached to a test structure. The robot
+        included stepper motors, servo motors, micro-controllers, pnuematic
+        control modules, a camera, and a Raspberry Pi for central control.
+      </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Arm Finished",
+        description: "",
         src: require("../assets/AniGram_Arm_Finished.jpg"),
       },
     ],
   },
   {
-    id: 2,
+    id: 1,
     imageFloat: "left",
-    imageHeight: 450,
+    maxWidth: 700,
+    cardHeader: "Robot Testing",
+    description: (
+      <>
+        After completing the extensive build over a few weeks we dove into
+        testing of all of the systems on the robot. I wrote all of the code for
+        the robot using the ROS framework and did most of the testing, one
+        example of which is shown in the video here. The robot performed very
+        well for its material and control limititations imposed by budget
+        constraints.
+      </>
+    ),
+
+    slides: [
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=Ikw7pUl9Z5E",
+        videoId: "Ikw7pUl9Z5E",
+      },
+    ],
+  },
+  {
+    id: 2,
+    imageFloat: "right",
+    maxWidth: 400,
     cardHeader: "Hand Design ",
     description: (
       <>
@@ -67,17 +100,17 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Hand with Granular Jamming Areas",
+        description: "",
         src: require("../assets/AniGram_Arm_Hand.jpg"),
       },
     ],
   },
   {
     id: 3,
-    imageFloat: "right",
-    imageHeight: 500,
+    imageFloat: "left",
+    maxWidth: 500,
     cardHeader: "Hand Internals breakdown",
     description: (
       <>
@@ -87,17 +120,17 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Hand Details",
+        description: "",
         src: require("../assets/AniGram_Arm_Hand_Details.JPG"),
       },
     ],
   },
   {
     id: 4,
-    imageFloat: "left",
-    imageHeight: 350,
+    imageFloat: "right",
+    maxWidth: 600,
     cardHeader: "Robot Arm CAD",
     description: (
       <>
@@ -109,17 +142,17 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Arm CAD",
+        description: "",
         src: require("../assets/AniGram_Arm_Exploded.jpg"),
       },
     ],
   },
   {
     id: 5,
-    imageFloat: "right",
-    imageHeight: 400,
+    imageFloat: "left",
+    maxWidth: 400,
     cardHeader: "Elbow Structure FEA",
     description: (
       <>
@@ -129,17 +162,17 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Arm FEA on Elbow Section",
+        description: "",
         src: require("../assets/AniGram_Arm_FEA.jpg"),
       },
     ],
   },
   {
     id: 6,
-    imageFloat: "left",
-    imageHeight: 400,
+    imageFloat: "right",
+    maxWidth: 400,
     cardHeader: "Differential Wrist Mechanism",
     description: (
       <>
@@ -150,9 +183,9 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot Arm Hand Interface Belt Setup",
+        description: "",
         src: require("../assets/AniGram_Arm_Belt.jpg"),
       },
     ],

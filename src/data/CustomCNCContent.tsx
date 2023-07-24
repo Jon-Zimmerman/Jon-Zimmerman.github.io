@@ -14,7 +14,7 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 350,
+    maxWidth: 550,
     cardHeader: "Finished CNC Design ",
     description: (
       <>
@@ -24,9 +24,9 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Finished CNC Design ",
+        description: "",
 
         src: require("../assets/CNC_Version_2.PNG"),
       },
@@ -35,27 +35,29 @@ export const sections = [
   {
     id: 0,
     imageFloat: "right",
-    imageHeight: 500,
-    cardHeader: "CAM Toolpaths ",
+    maxWidth: 325,
+    cardHeader: "Z Carriage ",
     description: (
       <>
-        I learned CAM tool path creation in fusion360 to quickly create parts
-        cheaply or in cases where 3D printing doesn't make as much sense.
+        The z carriage moves the spindle {"("}in this case a Dremel Rotary Tool{" "}
+        {")"}, vertically to achieve different cut depths. The CNC can cut
+        depths up to 2" with the right endmill.{" "}
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "CAM Toolpaths ",
+        description: "",
 
-        src: require("../assets/CNC_Toolpath.webp"),
+        src: require("../assets/CNC Z Carriage.jpg"),
       },
     ],
   },
+
   {
     id: 1,
     imageFloat: "left",
-    imageHeight: 500,
+    maxWidth: 300,
     cardHeader: "Motion Controller ",
     description: (
       <>
@@ -64,19 +66,79 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Motion Controller",
+        description: "",
 
         src: require("../assets/CNC_Rasp_Pi.jpg"),
       },
     ],
   },
   {
+    id: 0,
+    imageFloat: "right",
+    maxWidth: 500,
+    cardHeader: "CAM Toolpaths ",
+    description: (
+      <>
+        I learned CAM tool path creation in fusion360 to quickly create parts
+        cheaply or in cases where 3D printing doesn't make as much sense.
+      </>
+    ),
+
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/CNC_Toolpath.webp"),
+      },
+    ],
+  },
+  {
+    id: 2,
+    imageFloat: "left",
+    maxWidth: 600,
+    cardHeader: "Milling",
+    description: (
+      <>
+        This video shows the milling process in action on a test piece of wood
+        carving a mountain shape.
+      </>
+    ),
+
+    slides: [
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
+        videoId: "0xI43rbJjB0",
+      },
+    ],
+  },
+  {
     id: 2,
     imageFloat: "right",
-    imageHeight: 550,
+    maxWidth: 500,
     cardHeader: "Finished Part",
+    description: (
+      <>
+        This part is the finished test part I created which is a small mountain
+        range.
+      </>
+    ),
+
+    slides: [
+      {
+        description: " ",
+
+        src: require("../assets/mountain cnc.jpg"),
+      },
+    ],
+  },
+  {
+    id: 2,
+    imageFloat: "left",
+    maxWidth: 600,
+    cardHeader: "Finished Part for Quadruped Robot",
     description: (
       <>
         The main structural plate for my quadruped robot would be very close to
@@ -85,7 +147,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: " ",
 

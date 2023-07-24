@@ -46,6 +46,7 @@ export const projectContent = [
         src: require("../assets/FRC_Robot_Championship_Team.jpg"),
       },
       {
+        description: "Team 5901 and alliance members becoming State Division Champion",
         type: "custom-slide",
         src: "https://www.youtube.com/embed/ewtG-txRmU0",
         videoId: "ewtG-txRmU0",
@@ -78,24 +79,25 @@ export const projectContent = [
           hand of a anthropomorphic arm for use as an interactive animatronic or
           general purpose humanoid robot.
         </strong>{" "}
-        Granular jamming utilizies small granules of material in a flexible
-        gripper such that when suction is applied it "jams" the granules around
-        an object creating a significantly better grip than conventional robotic
-        grippers have especially for flat, delicate, or thin walled items.
+        in the robots hand small granules of material are contained in a
+        flexible gripper and are jammed around an object when suction is applied
+        creating a significantly better grip than conventional grippers
+        especially for flat, delicate, or thin walled items.
       </>
     ),
 
     skills: ["C++", "OpenCV", "3D-Printing", "Solidworks", "Electrical Design"],
     slides: [
       {
-        description: "Robot Arm",
+        description: "Anigram Robot Arm",
         src: require("../assets/AniGram_Arm_Frame.png"),
       },
 
       {
-        description: "Robot Arm Finished",
+        description: "Anigram Robot Arm Finished",
         src: require("../assets/AniGram_Arm_Finished.jpg"),
-      },      {
+      },
+      {
         type: "custom-slide",
         src: "https://www.youtube.com/watch?v=Ikw7pUl9Z5E",
         videoId: "Ikw7pUl9Z5E",
@@ -140,7 +142,7 @@ export const projectContent = [
       {
         description: "HopperBot Delivery Robot Concept",
         src: require("../assets/HopperBot_Render.webp"),
-      },      
+      },
       {
         type: "custom-slide",
         src: "https://www.youtube.com/watch?v=KSGEKOYDzTs",
@@ -157,7 +159,7 @@ export const projectContent = [
       {
         description: "HopperBot Electrical",
         src: require("../assets/HopperBot_Electrical.webp"),
-      },  
+      },
     ],
     links: {
       url: "/hopperbot",
@@ -212,6 +214,14 @@ export const projectContent = [
     skills: ["CAD", "3D Printing", "Electronics", "Python"],
     slides: [
       {
+        description: "3D printer rendering of front",
+        src: require("../assets/Printer_Render.png"),
+      },      
+      {
+        description: "3D printer rendering of fan system",
+        src: require("../assets/Fan_Render.JPG"),
+      },
+         {
         description: "3D printer enclosure front",
         src: require("../assets/Printer_Front.jpg"),
       },

@@ -12,7 +12,7 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 350,
+    maxWidth: 600,
     cardHeader: "Intro",
     description: (
       <>
@@ -25,24 +25,19 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description:
-          "Team 5901, the Electric Eels, placing a game piece during the FRC World Championship.",
+        description: "",
 
         src: require("../assets/FRC_Robot_Championship_Team.jpg"),
       },
     ],
-
-    links: {
-      url: "/first-robotics-mentor",
-    },
   },
   {
     id: 0,
     imageFloat: "right",
-    imageHeight: 350,
-    cardHeader: "World Championship",
+    maxWidth: 600,
+    cardHeader: "State + World Championship",
     description: (
       <>
         I acted as the drive team coach and led the team to become a{" "}
@@ -52,23 +47,40 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description:
-          "Team 5901, the Electric Eels, placing a game piece during the FRC World Championship.",
+        description: "",
 
         src: require("../assets/FRC_Robot_Championship.jpg"),
       },
     ],
+  },
+  {
+    id: 0,
+    imageFloat: "left",
+    maxWidth: 700,
+    cardHeader: "State + World Championship",
+    description: (
+      <>
+        I acted as the drive team coach and led the team to become a{" "}
+        <strong>Division Winner at the State Championship</strong> and attend
+        the <strong>World Championship</strong> for the first time in their
+        school's history.{" "}
+      </>
+    ),
 
-    links: {
-      url: "/first-robotics-mentor",
-    },
+    slides: [
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/embed/ewtG-txRmU0",
+        videoId: "ewtG-txRmU0",
+      },
+    ],
   },
   {
     id: 1,
-    imageFloat: "left",
-    imageHeight: 400,
+    imageFloat: "right",
+    maxWidth: 650,
     cardHeader: "Robot CAD",
     description: (
       <>
@@ -80,22 +92,19 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "Robot CAD",
+        description: "",
 
         src: require("../assets/FRC_Robot_CAD.jpg"),
       },
     ],
-    links: {
-      url: "/first-robotics-mentor",
-    },
   },
   {
     id: 2,
-    imageFloat: "right",
-    imageHeight: 550,
-    cardHeader: "Finshed Build",
+    imageFloat: "left",
+    maxWidth: 450,
+    cardHeader: "Finished Build",
     description: (
       <>
         With the FRC game containing a seesaw-like field element and agressive
@@ -108,25 +117,34 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description:
-          "Team 5901, the Electric Eels, placing a game piece during the FRC World Championship.",
+        description: "",
 
         src: require("../assets/FRC_Robot_Standalone.jpg"),
       },
     ],
+  },
+  {
+    id: 2,
+    imageFloat: "right",
+    maxWidth: 700,
+    cardHeader: "Robot Balancing",
+    description: (
+      <>
+        The endgame of each match involves the two alliances trying to have as
+        many robots as they can balance on the "charge station", a see-saw like
+        platform. Teams score points for getting onto the charge station and
+        extra points for successfully balancing on the charge station.
+      </>
+    ),
 
-    links: {
-      url: "/first-robotics-mentor",
-    },
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/FRC_Robot_Ramp.jpg"),
+      },
+    ],
   },
 ];
-// skills: [
-//   "Leadership",
-//   "Mechanical Design",
-//   "CAD",
-//   "Electrical",
-//   "Testing",
-//   "Java",
-// ],

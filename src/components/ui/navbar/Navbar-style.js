@@ -61,6 +61,8 @@ export const styles = (theme) => ({
   },
   menuIcon: {
     display: "visible",
+    height: "100%",
+    color: "#999!important",
     [theme.breakpoints.up("md")]: { visibility: "hidden" },
   },
 

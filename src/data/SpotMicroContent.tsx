@@ -18,7 +18,7 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    imageHeight: 500,
+    maxWidth: 600,
     cardHeader: "CAD Design ",
     description: (
       <>
@@ -28,19 +28,21 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: "",
 
         src: require("../assets/Spot_Micro_CAD.PNG"),
       },
+
+
     ],
   },
 
   {
     id: 1,
     imageFloat: "right",
-    imageHeight: 480,
+    maxWidth: 520,
     cardHeader: "Inverse Kinematics ",
     description: (
       <>
@@ -50,18 +52,19 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
-        description: "math",
+        description: " ",
 
         src: require("../assets/Spot_Micro_Math.PNG"),
-      },
+      }
+
     ],
   },
   {
     id: 2,
-    imageFloat: "right",
-    imageHeight: 450,
+    imageFloat: "left",
+    maxWidth: 700,
     cardHeader: "Leg Simulation",
     description: (
       <>
@@ -71,7 +74,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: " ",
 
@@ -81,8 +84,8 @@ export const sections = [
   },
   {
     id: 0,
-    imageFloat: "left",
-    imageHeight: 500,
+    imageFloat: "right",
+    maxWidth: 500,
     cardHeader: "Leg Module ",
     description: (
       <>
@@ -91,7 +94,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: " ",
 
@@ -101,8 +104,8 @@ export const sections = [
   },
   {
     id: 2,
-    imageFloat: "right",
-    imageHeight: 375,
+    imageFloat: "left",
+    maxWidth: 600,
     cardHeader: "Construction",
     description: (
       <>
@@ -112,7 +115,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: " ",
 
@@ -123,8 +126,8 @@ export const sections = [
   
   {
     id: 2,
-    imageFloat: "left",
-    imageHeight: 600,
+    imageFloat: "right",
+    maxWidth: 500,
     cardHeader: "Finished Robot",
     description: (
       <>
@@ -135,7 +138,7 @@ export const sections = [
       </>
     ),
 
-    image: [
+    slides: [
       {
         description: " ",
 

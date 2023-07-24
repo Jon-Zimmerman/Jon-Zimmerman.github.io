@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CardButtons = (props) => {
   const { links } = props;
   return (
-    <CardActions>
+    <CardActions sx={{ paddingLeft: "0px"}}>
 
         <Link
           key={links.url}

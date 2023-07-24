@@ -19,12 +19,17 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 //import YoutubeVideo from "../YoutubeEmbed/YoutubeVideo";
+//import useMediaQuery from "@mui/material/useMediaQuery";
+// import { useTheme } from "@emotion/react";
+// import { styled } from "@mui/system";
 
 import { Slide, YoutubeSlide } from "yet-another-react-lightbox";
-const YoutubeVideo = React.lazy(() => import('../YoutubeEmbed/YoutubeVideo'));
+const YoutubeVideo = React.lazy(() => import("../YoutubeEmbed/YoutubeVideo"));
 
-const Lightbox = React.lazy(
-  () => import('yet-another-react-lightbox').then(module => ({ default: module.Lightbox }))
+const Lightbox = React.lazy(() =>
+  import("yet-another-react-lightbox").then((module) => ({
+    default: module.Lightbox,
+  }))
 );
 
 function isCustomSlide(slide: Slide): slide is YoutubeSlide {
@@ -39,32 +44,75 @@ declare module "yet-another-react-lightbox" {
     "custom-slide": YoutubeSlide;
   }
 }
+
 const MediaCarousel = (props) => {
   const classes = useClasses(styles);
   const { slides } = props.project;
-
+  // const captionsBool = props.captionsBool;
+  const { carouselType } = props;
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [index, setIndex] = React.useState(0);
-  const clickItem = (index) => {
+  const { index, setIndex } = props;
+
+  const clickItem = (newIndex: number) => {
     setModalOpen(true);
-    setIndex(index);
+    setIndex(newIndex);
   };
   const updateIndex = ({ index: current }: { index: number }) => {
     setIndex(current);
+
     //console.log(current);
   };
+  // const plugins = captionsBool
+  //   ?
+  //   : [Counter, Fullscreen, Zoom];
 
+  // const theme = useTheme();
+  //const mobile = useMediaQuery(theme.breakpoints.down("lg"));
+  // const StyledCarousel = styled(Carousel)(({ theme }) => ({
+
+  //     //maxWidth: props.maxWidth,
+  //     "& img": {
+  //       borderRadius: "25px",
+  //     }
+
+  //   // "& .slide": {
+  //   //   width: "100%",
+
+  //   // },
+  //   // "& .slider": {
+  //   //   width: "max-content!important",
+  //   //   display: "inline-flex",
+  //   //   flexDirection: "row",
+  //   // },
+  //   // "& div div div ul li div": {
+  //   //   display: "inline-flex",
+  //   //   flexDirection: "row",
+  //   //   width: "max-content!important",
+  //   //   justifyContent: props.imageFloat=== "left" ? "flex-start" : "flex-end",
+  //   //   flexShrink: 1,
+  //   // }
+
+  // }));
+
+  //console.log(props)
+  const renderNext = slides.length > 1;
+  const renderPrev = renderNext;
+  const projectTypeCarousel = carouselType === "projectCarousel";
   return (
-    <div className={classes.carouselContainer}>
+    <>
       <Lightbox
         open={modalOpen}
         close={() => setModalOpen(false)}
         slides={slides}
         index={index}
         //zoom={{ scrollToZoom: true }}
+
         plugins={[Captions, Counter, Fullscreen, Zoom]}
         on={{ view: updateIndex }}
         render={{
+          buttonPrev: renderPrev ? undefined : () => null,
+          buttonNext: renderNext ? undefined : () => null,
+
           slide: ({ slide }) =>
             isCustomSlide(slide) ? (
               <React.Fragment key={slides[index].videoId}>
@@ -78,74 +126,99 @@ const MediaCarousel = (props) => {
         }}
       />
 
-        <Carousel
-          onClickItem={clickItem}
-          className={classes.carousel}
-          selectedItem={index}
-          //style={{ backgroundColor: "#fff" }}
-          showThumbs={false}
-          infiniteLoop={true}
-          swipeable={false}
-          //height={"auto"}
-          renderArrowPrev={(onClickHandler, hasPrev, label) =>
-            hasPrev && (
-              <button
-                type="button"
-                onClick={onClickHandler}
-                title={label}
-                className={classes.arrows}
+      <Carousel
+        onClickItem={clickItem}
+        className={`${
+          projectTypeCarousel ? classes.projectCarousel : classes.carousel
+        } `}
+        selectedItem={index}
+        //dynamicHeight= {true}
+        width={props.width}
+        onChange={setIndex}
+        showThumbs={false}
+        infiniteLoop={true}
+        swipeable={false}
+        showIndicators={true}
+        //height={"auto"}
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              className={classes.arrows}
+            >
+              <NavigateBeforeIcon fontSize="large" />
+            </button>
+          )
+        }
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              className={classes.arrows}
+              style={{
+                right: 0,
+              }}
+            >
+              <NavigateNextIcon fontSize="large" />
+            </button>
+          )
+        }
+      >
+        {slides.map((mediaItem) =>
+          mediaItem.videoId ? (
+            <React.Fragment key={mediaItem.videoId}>
+              <YoutubeVideo
+                key={mediaItem.videoId}
+                videoId={mediaItem.videoId}
+              />{" "}
+              <Typography
+                variant="body1"
+                key={mediaItem.description}
+                className={`${
+                  projectTypeCarousel
+                    ? classes.description
+                    : classes.descriptionPage
+                } `}
               >
-                <NavigateBeforeIcon fontSize="large" />
-              </button>
-            )
-          }
-          renderArrowNext={(onClickHandler, hasNext, label) =>
-            hasNext && (
-              <button
-                type="button"
-                onClick={onClickHandler}
-                title={label}
-                className={classes.arrows}
-                style={{
-                  right: 0,
-                }}
+                {mediaItem.description}
+              </Typography>
+            </React.Fragment>
+          ) : (
+            <React.Fragment key={mediaItem.src}>
+              <div
+                className={`${
+                  projectTypeCarousel ? classes.imgContainer : ""
+                } `}
               >
-                <NavigateNextIcon fontSize="large" />
-              </button>
-            )
-          }
-        >
-          {slides.map((mediaItem) =>
-            mediaItem.videoId ? (
-              <React.Fragment key={mediaItem.videoId}>
-                <YoutubeVideo
-                  key={mediaItem.videoId}
-                  videoId={mediaItem.videoId}
+                <img
+                  className={`${
+                    projectTypeCarousel ? classes.carouselImage : ""
+                  } `}
+                  key={mediaItem.src}
+                  src={mediaItem.src}
+                  alt={mediaItem.description}
                 />
-              </React.Fragment>
-            ) : (
-              <React.Fragment key={mediaItem.src}>
-                <div className={classes.imgContainer}>
-                  <img
-                    className={classes.carouselImage}
-                    key={mediaItem.src}
-                    src={mediaItem.src}
-                    alt={mediaItem.description}
-                  />
-                </div>
-                <Typography
-                  variant="body2"
-                  key={mediaItem.description}
-                  className={classes.description}
-                >
-                  {mediaItem.description}
-                </Typography>
-              </React.Fragment>
-            )
-          )}
-        </Carousel>
-      </div>
- 
+              </div>
+              <Typography
+                variant="body1"
+                key={mediaItem.description}
+                className={`${
+                  projectTypeCarousel
+                    ? classes.description
+                    : classes.descriptionPage
+                } `}
+              >
+                {mediaItem.description}
+              </Typography>
+            </React.Fragment>
+          )
+        )}
+      </Carousel>
+    </>
   );
 };
 

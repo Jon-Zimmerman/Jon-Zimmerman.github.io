@@ -64,7 +64,7 @@ export const styles = (theme) => ({
     fontStyle: "italic",
   },
   description: {
-    fontSize: "0.95rem!important",
+    fontSize: "1.05rem!important",
     fontFamily: ["Playfair Display", "serif !important"].join(","),
     fontStyle: "normal",
   },
@@ -75,11 +75,15 @@ export const styles = (theme) => ({
     },
   },
   imgContainerNoCaption: {
+    [theme.breakpoints.down("lg")]: {
+      width: "-webkit-fill-available",
+    },
+    
     " p": {
       position: "relative",
       backgroundColor: "transparent",
    
-      height: "2.5rem",
+      minHeight: "2.5rem",
     },
     " img": {
       borderRadius: "25px",

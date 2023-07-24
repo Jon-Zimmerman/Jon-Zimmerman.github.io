@@ -14,7 +14,7 @@ export const sections = [
   {
     id: 0,
     imageFloat: "left",
-    maxWidth: 475,
+    maxWidth: 570,
     cardHeader: "Ohio State Robot Competition",
     description: (
       <>
@@ -29,25 +29,48 @@ export const sections = [
 
     slides: [
       {
-        description: "Render of Competition Robot",
+        description: "Render of competition robot",
 
         src: require("../assets/robot cad render for competition.PNG"),
       },
       {
-        description: "Physical Robot",
+        description: "Physical robot",
+
+        //  description: "Physical Robot",
 
         src: require("../assets/OSU_Robot_Comp_Real.jpg"),
       },
       {
-        description: "Finals Match of Competition",
+        description: "Finals Match",
         type: "custom-slide",
-        src: "https://www.youtube.com/embed/LodWBmdctYo",
-        videoId: "LodWBmdctYo",
+        src: "https://youtu.be/cAMcm-07DN0",
+        videoId: "cAMcm-07DN0",
+      },
+      {
+        description: "Early prototyping phase",
+
+        src: require("../assets/OSU_Early_Prototype.jpg"),
+      },
+      {
+        description: "Turning the crank precisely 180 degrees",
+
+        src: require("../assets/OSU_Crank.jpg"),
+      },
+      {
+        description: "Line following sensor",
+
+        src: require("../assets/OSU_Line_Sensor.jpg"),
+      },
+      {
+        description:
+          "Sensing the color of a light under the robot and pushing the correct button",
+
+        src: require("../assets/OSU_Top_Down_Sensor_Press.jpg"),
       },
     ],
   },
   {
-    id: 0,
+    id: 1,
     imageFloat: "right",
     maxWidth: 425,
     cardHeader: " Ohio State Formula SAE",
@@ -68,7 +91,7 @@ export const sections = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     imageFloat: "left",
     maxWidth: 600,
     cardHeader: "RFID Tag Launching Alarm Clock ",
@@ -96,7 +119,7 @@ export const sections = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     imageFloat: "right",
     maxWidth: 550,
     cardHeader: "Reverse Engineering Project ",
@@ -110,24 +133,27 @@ export const sections = [
 
     slides: [
       {
-        description: "",
+        description:
+          "Reverse engineered toaster oven modeled and rendered in Solidworks",
 
         src: require("../assets/FInal Assembly view 7.JPG"),
       },
       {
+        description: "Exploded view animation of the toaster oven",
         type: "custom-slide",
         src: "https://www.youtube.com/embed/ArTjmDcmgbU",
         videoId: "ArTjmDcmgbU",
       },
       {
-        description: "",
+        description:
+          "I reverse engineered this mechanism that controls which heating elements to turn on and maintains the temperature",
 
         src: require("../assets/Temp assembly 1.JPG"),
       },
     ],
   },
   {
-    id: 2,
+    id: 4,
     imageFloat: "left",
     maxWidth: 550,
     cardHeader: "Spring Testing Machine",
@@ -148,14 +174,24 @@ export const sections = [
         src: require("../assets/render of total machine.JPG"),
       },
       {
-        description: " ",
+        description: "Spring compression mechanism ",
 
         src: require("../assets/spring uncompressed.PNG"),
+      },
+      {
+        description:
+          "The selected motor was an industrial motor with a gearbox making it very heavy, therefore we selected to locate it at the bottom of the machine for stability. ",
+
+        src: require("../assets/spring_machine_rear.JPG"),
+      },      {
+        description: "This flywheel design lowered the dynamic load on the motor per our Matlab simulations, increasing cycling durability of the motor and overall system. ",
+
+        src: require("../assets/spring_machine_flywheel.JPG"),
       },
     ],
   },
   {
-    id: 2,
+    id: 5,
     imageFloat: "right",
     maxWidth: 450,
     cardHeader: "Machining",
@@ -163,7 +199,7 @@ export const sections = [
       <>
         For several classes I machined various parts using conventional and CNC
         milling techiniques. These images show some of the parts that I
-        machined. Specifically with regard to the air cylinder, the cylinder is
+        machined. For the air cylinder and piston shown, the piston is
         within 0.0005" (half a thousand of an inch) of the corresponding bore.
       </>
     ),
@@ -178,7 +214,8 @@ export const sections = [
         description: " ",
 
         src: require("../assets/block.jpg"),
-      },      {
+      },
+      {
         description: " ",
 
         src: require("../assets/cylinder.jpg"),
@@ -186,7 +223,7 @@ export const sections = [
     ],
   },
   {
-    id: 2,
+    id: 6,
     imageFloat: "left",
     maxWidth: 500,
     cardHeader: "Airfoil Design",

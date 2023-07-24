@@ -23,7 +23,8 @@ export const styles = (theme) => ({
     alignItems: "center",
     justifyContent: "center",
     width: "95%",
-    height: "95%",
+    //height: "95%",    
+    height: "min-content",
     margin: "0",    
     alignSelf: "center",
    

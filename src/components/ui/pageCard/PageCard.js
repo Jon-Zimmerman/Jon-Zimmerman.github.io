@@ -64,9 +64,7 @@ const PageCard = (props) => {
           setIndex={setIndex}
           carouselType={"pageCarousel"}
         />
-        {/* <Typography className={classes.lowerDescription} align="center">
-          {section.slides[index].label}
-        </Typography> */}
+
       </div>
       <div id="contentWrapper" className={classes.contentWrapper}>
         <div id="cardContent" className={classes.cardContent + " " + textFloat}>

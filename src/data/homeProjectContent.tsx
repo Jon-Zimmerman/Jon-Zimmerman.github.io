@@ -226,7 +226,7 @@ export const projectContent = [
         src: require("../assets/Printer_Front.jpg"),
       },
       {
-        description: "3D printer enclosure custom electronics and fan.",
+        description: "3D printer enclosure custom electronics and fan",
         src: require("../assets/Printer_Rear.jpg"),
       },
       {

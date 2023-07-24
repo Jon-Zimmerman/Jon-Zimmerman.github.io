@@ -120,7 +120,7 @@ export const sections = [
         interior ambient leds using a pre-filled color pallet, control over the
         target setpoint and information about the current temperature, fan
         speed, and humidity. These values are retrieved over a custom serial
-        interface from the Arduino.
+        interface from an Arduino.
       </>
     ),
 

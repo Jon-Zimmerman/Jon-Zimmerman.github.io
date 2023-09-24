@@ -60,7 +60,7 @@ export const styles = (theme) => ({
   projectCarousel: {
     // maxHeight: "430px",
     display: "flex",
-
+    cursor: "pointer",
     alignItems: "center",
     justifyContent: "center",
     [theme.breakpoints.up("lg")]: {

@@ -98,6 +98,7 @@ const MediaCarousel = (props) => {
   const renderNext = slides.length > 1;
   const renderPrev = renderNext;
   const projectTypeCarousel = carouselType === "projectCarousel";
+
   return (
     <>
       <Lightbox
@@ -175,17 +176,24 @@ const MediaCarousel = (props) => {
                 key={mediaItem.videoId}
                 videoId={mediaItem.videoId}
               />{" "}
-              <Typography
-                variant="body1"
-                key={mediaItem.description}
-                className={`${
-                  projectTypeCarousel
-                    ? classes.description
-                    : classes.descriptionPage
-                } `}
-              >
-                {mediaItem.description}
-              </Typography>
+              {
+                (mediaItem.description == null ? (
+                  <></>
+                ) : (
+                  <Typography
+                    variant="body1"
+                    id="description"
+                    key={mediaItem.description}
+                    className={`${
+                      projectTypeCarousel
+                        ? classes.description
+                        : classes.descriptionPage
+                    } `}
+                  >
+                    {mediaItem.description}
+                  </Typography>
+                ))
+              }
             </React.Fragment>
           ) : (
             <React.Fragment key={mediaItem.src}>

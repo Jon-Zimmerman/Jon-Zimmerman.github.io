@@ -22,14 +22,17 @@ export const styles = (theme) => ({
   },
   imageLeft: {
     justifyContent: "start !important",
+    cursor: "pointer"
   },
   imageRight: {
     justifyContent: "end !important",
+    cursor: "pointer"
   },
   contentWrapper: {
     display: "flex",
     flexGrow: "1",
     justifyContent: "flex-end",
+    
   },
   cardContent: {
     marginTop: "1rem",

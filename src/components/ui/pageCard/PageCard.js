@@ -6,22 +6,16 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@emotion/react";
 
 import React from "react";
-// import { Lightbox } from "yet-another-react-lightbox";
-// import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
-// import Zoom from "yet-another-react-lightbox/plugins/zoom";
-//import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
 import MediaCarousel from "../mediaCarousel/MediaCarousel.tsx";
 
 const PageCard = (props) => {
   const classes = useClasses(styles);
   const { section } = props;
-  //const slides = section.image;
+
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("lg"));
-  //const [modalOpen, setModalOpen] = React.useState(false);
 
-  //console.log(section);
   var flexDirection =
     section.imageFloat === "left" ? classes.row : classes.rowReverse;
   var imageFloat =
@@ -30,17 +24,8 @@ const PageCard = (props) => {
     section.imageFloat === "left" ? classes.textRight : classes.textLeft;
 
   const width = mobile ? "auto" : section.maxWidth + "px";
-  // const clickItem = (index) => {
-  //   setModalOpen(true);
-  //   setIndex(index);
-  // };
-  const [index, setIndex] = React.useState(0);
-  // const description = React.useMemo(() => {
-  //   console.log(index)
-  //   console.log("desc usememo")
-  //   return section.slides[index].description;
 
-  // },[index])
+  const [index, setIndex] = React.useState(0);
 
   return (
     <div

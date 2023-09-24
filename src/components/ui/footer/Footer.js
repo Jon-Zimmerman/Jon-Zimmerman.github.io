@@ -18,7 +18,7 @@ const Footer = () => {
           <a
             className={classes.icon}
             style={{"paddingLeft": "1px"}}
-            href="https://github.com/"
+            href="https://github.com/Jon-Zimmerman"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ const Footer = () => {
           <a
             className={classes.icon}
             style={{"paddingLeft": "1px"}}
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/jonzimm/"
             target="_blank"
             rel="noopener noreferrer"
           >

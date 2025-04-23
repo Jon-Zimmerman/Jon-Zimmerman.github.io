@@ -2,7 +2,7 @@ import { Container, Typography } from "@mui/material";
 
 import { styles } from "./About-style";
 import Title from "../SectionTitle.js";
-import aboutMeImage from "../../../../assets/About_Me_4.png";
+import aboutMeImage from "../../../../assets/About_Me_5.JPG";
 import useClasses from "../../../useClasses.js";
 import {
   createTheme,

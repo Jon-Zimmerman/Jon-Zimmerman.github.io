@@ -38,6 +38,7 @@ export const styles = theme => ({
       order: 0,
       
     },
+    borderRadius:"50%"
   },
   colorText: {
     color: [theme.palette.primary.main],

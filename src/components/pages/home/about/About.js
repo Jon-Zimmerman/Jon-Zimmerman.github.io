@@ -28,12 +28,11 @@ const About = () => {
           <div className={classes.textWrapper}>
             <ThemeProvider theme={theme}>
               <Typography className={classes.aboutText}>
-                Hello! I am{" "}
-                <span className={classes.colorText}>Jon Zimmerman</span>, a
+                My name is{" "}
+                <span className={classes.colorText}>Jon Zimmerman</span>, I am a
                 mechanical engineer with a passion for innovating in the world
                 of robotics. I have experience in designing manufacturing
-                equipment, mobile robotic devices, smart IoT products, websites,
-                and software for robots.
+                equipment, robot arms, mobile robot platforms, software solutions for autonomous vehicles, smart IoT devices, websites, and vision system software.
                 <br></br> In my free time, I enjoy mentoring a high school
                 robotics team, 3D printing, art, and making my own board games!
               </Typography>

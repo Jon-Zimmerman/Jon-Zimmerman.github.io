@@ -63,12 +63,12 @@ export const styles = (theme) => ({
 
   cardHeader: {
     fontSize: "2rem!important",
-    fontFamily: ["Playfair Display", "serif !important"].join(","),
-    fontStyle: "italic",
+    fontFamily: "Roboto, sans-serif !important",
+    fontStyle: "bold",
   },
   description: {
     fontSize: "1.05rem!important",
-    fontFamily: ["Playfair Display", "serif !important"].join(","),
+    fontFamily: "Roboto, sans-serif !important",
     fontStyle: "normal",
   },
 

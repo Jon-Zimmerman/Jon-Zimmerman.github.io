@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import AnimationName from "./animatedName/AnimatedName";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, CircularProgress, Box } from "@mui/material";
 import { motion } from "framer-motion";
 
 import { Button } from "@mui/material";
@@ -66,7 +66,9 @@ const Home = (props) => {
   return (
     <Container>
       <div style={{ display: "flex" }} className={classes.home}>
-        <ThreeJSModel className={classes.modelContainer} /> 
+        <Suspense fallback={<Box display="flex" justifyContent="center" alignItems="center" minHeight="400px" width="50%"><CircularProgress /></Box>}>
+          <ThreeJSModel className={classes.modelContainer} />
+        </Suspense> 
 
         <div style={{ height: "100%" }} className={classes.container}>
           <AnimationName style={{ height: "100%" }} {...props} />

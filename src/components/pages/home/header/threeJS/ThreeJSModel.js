@@ -1,4 +1,4 @@
-import React, { useRef, Suspense } from "react";
+import React, { useRef, Suspense, useState } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { Environment, ContactShadows, OrbitControls } from "@react-three/drei";
@@ -8,6 +8,8 @@ import { useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion";
 import { styles } from "./ThreeJSModel-style";
 import useClasses from "../../../../useClasses.js";
+import { CircularProgress, Container, Typography, Box } from "@mui/material";
+import { RotateRight } from "@mui/icons-material";
 
 //import useMediaQuery from "@mui/material/useMediaQuery";
 //import { useTheme } from "@emotion/react";
@@ -19,6 +21,9 @@ function Renderer() {
 const ThreeJSModel = () => {
   const ref = useRef();
   const classes = useClasses(styles);
+  const [overlayVisible, setOverlayVisible] = useState(true);
+  const [overlayDismissed, setOverlayDismissed] = useState(false);
+  const [hoveredOnce, setHoveredOnce] = useState(false);
 
   // const theme = useTheme();
   //renderer.debug.checkShaderErrors = false;
@@ -27,9 +32,23 @@ const ThreeJSModel = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      onMouseEnter={() => {
+        if (!hoveredOnce) {
+          setOverlayVisible(false);
+          setHoveredOnce(true);
+        }
+      }}
+      onMouseLeave={() => {
+        if (!hoveredOnce) {
+          setOverlayVisible(true);
+        }
+      }}
+      className={classes.canvas}
+      style={{ position: 'relative' }}
       transition={{ delay: 0.65, duration: 1.1, ease: [0.455, 0.03, 0.515, 0.955] }}
     >
-      <Canvas
+      <Container>
+<Canvas
         className={classes.canvas}
         shadows
         dpr={[0.5, 2]}
@@ -42,7 +61,7 @@ const ThreeJSModel = () => {
           <pointLight intensity={2} position={[30, 30, 5]} />
           <ambientLight intensity={4} />
           <group position={[0, -1.5, 0]}>
-            <Suspense fallback={<h4>Loading...</h4>}>
+            <Suspense fallback={<CircularProgress />}>
               <mesh
           
                 //castShadow
@@ -89,11 +108,41 @@ const ThreeJSModel = () => {
               </mesh>
             </Environment>
           </Suspense>
-          {/*   */}
 
           <OrbitControls autoRotate={true} autoRotateSpeed={1} ref={ref} />
         </Suspense>
       </Canvas>
+      {!overlayDismissed && (
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
+            color: 'gray',
+            textShadow: '0 0 10px rgba(0,0,0,0.5)',
+            pointerEvents: 'none',
+          }}
+          component={motion.div}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: overlayVisible ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          onAnimationComplete={(definition) => {
+            if (definition.opacity === 0 && !overlayVisible) {
+              setOverlayDismissed(true);
+            }
+          }}
+        >
+          <RotateRight sx={{ fontSize: '3rem' }} />
+          <Typography variant="h4">Drag to Orbit</Typography>
+        </Box>
+      )}
+
+      </Container>
+      
     </motion.div>
   );
 };

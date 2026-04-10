@@ -3,10 +3,12 @@ export const styles = (theme) => ({
     margin: "0.2rem",
     marginLeft: "0.0rem",
     color: "white",
+    
   },
   allChips: {
-    margin: "0.5rem 0.3rem",
+    margin: "0.3rem 0.1rem",
     marginLeft: "0px",
+    marginBottom: "0.1rem",
   },
   card: {
     margin: "3rem auto",

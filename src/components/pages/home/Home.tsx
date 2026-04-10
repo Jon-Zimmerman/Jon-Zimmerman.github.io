@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Suspense } from "react";
+import { CircularProgress, Box } from "@mui/material";
 
 import Header from "./header/Header.js";
 import About from "./about/About.js";
@@ -11,7 +13,9 @@ function Home(props) {
       <Header></Header>
       <About></About>
       <Experience></Experience>
-      <Projects {...props}></Projects>
+      <Suspense fallback={<Box display="flex" justifyContent="center" alignItems="center" minHeight="200px"><CircularProgress /></Box>}>
+        <Projects {...props}></Projects>
+      </Suspense>
     </>
   );
 }

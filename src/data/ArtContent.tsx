@@ -55,29 +55,10 @@ export const sections = [
       },
     ],
   },
+
   {
     id: 0,
     imageFloat: "left",
-    maxWidth: 500,
-    cardHeader: "Photogrammetry of an Actual Island ",
-    description: (
-      <>
-        This island model was captured with data from an online terrain mapping
-        service. It was 3d printed, painted, and covered in modeling grass.{" "}
-      </>
-    ),
-
-    slides: [
-      {
-        description: "",
-
-        src: require("../assets/DSC_0148.jpg"),
-      },
-    ],
-  },
-  {
-    id: 0,
-    imageFloat: "right",
     maxWidth: 400,
     cardHeader: "Falcon Heavy Rocket Launch ",
     description: (
@@ -99,7 +80,7 @@ export const sections = [
 
   {
     id: 2,
-    imageFloat: "left",
+    imageFloat: "right",
     maxWidth: 400,
     cardHeader: "Lighthouse on A Rock Cliff",
     description: (
@@ -121,6 +102,26 @@ export const sections = [
         description: "",
 
         src: require("../assets/lighthouse 2.jpg"),
+      },
+    ],
+  },
+    {
+    id: 0,
+    imageFloat: "left",
+    maxWidth: 500,
+    cardHeader: "Photogrammetry of an Actual Island ",
+    description: (
+      <>
+        This island model was captured with data from an online terrain mapping
+        service. It was 3d printed, painted, and covered in modeling grass.{" "}
+      </>
+    ),
+
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/DSC_0148.jpg"),
       },
     ],
   },

@@ -3,7 +3,7 @@ declare var require: any;
 export const title = "FIRST Robotics Mentor";
 export const intro = (
   <>
-    I am the lead technical mentor for Team 5901, the Electric Eels, a Detroit
+    I am the lead engineering mentor for FIRST Robotics Competition Team 226 Hammerheads, a Troy Michigan
     based high school robotics team.{" "}
   </>
 );
@@ -11,16 +11,16 @@ export const intro = (
 export const sections = [
   {
     id: 0,
-    imageFloat: "left",
+    imageFloat: "right",
     maxWidth: 600,
     cardHeader: "Intro",
     description: (
       <>
-        <strong>
-          I am the lead technical mentor for Team 5901, the Electric Eels, a
-          Detroit based high school robotics team.
-        </strong>{" "}
-        As the lead technical mentor I led the students through design,
+        
+          I am the <strong>lead engineering mentor</strong> for FIRST Robotics Competition Team 226 Hammerheads, a
+          Troy Michigan based high school robotics team.
+        {" "}
+        As the lead engineering mentor I led the students through design,
         manufacturing, wiring, programming, and testing.{" "}
       </>
     ),
@@ -29,7 +29,65 @@ export const sections = [
       {
         description: "",
 
-        src: require("../assets/FRC_Robot_Championship_Team.jpg"),
+        src: require("../assets/226/group_photo.png"),
+      },
+    ],
+  },
+    {
+    id: 0,
+    imageFloat: "left",
+    maxWidth: 600,
+    cardHeader: "Competition",
+    description: (
+      <>
+
+          Each year FIRST Robotics Competition releases a new game with a new set of challenges. Teams design a robot to complete these challenges and advance from district to state to world levels based on their performance. Our team works 6 days a week for ~7 weeks to design, build, and program a highly advanced robot with camera systems, brushless motors, sensors, and software automations. We compete in 3+ events each season, culminating in the World Championship in Houston Texas.{" "}
+
+        As the lead technical mentor I led the students through design, manufacturing, wiring, programming, and testing.{" "}
+      </>
+    ),
+
+    slides: [
+      {
+        description: "",
+
+        src: require("../assets/226/2026_Lake_City.jpg"),
+      },
+    ],
+  },
+    {
+    id: 1,
+    imageFloat: "right",
+    maxWidth: 650,
+    cardHeader: "Robot CAD",
+    description: (
+      <>
+        Each year the team designs a new robot to compete in the FRC game. The design process starts with brainstorming and prototyping, then moves to CAD modeling and manufacturing. The students are responsible for the design of the robot, with mentors providing critical advice and feedback on design feasibility, ability to manufacture, and performance. 
+      </>),
+      slides: [
+      {
+        description: "",
+
+        src: require("../assets/226/Triton_CAD_2.jpg"),
+      },
+    ],
+  },
+    {
+    id: 0,
+    imageFloat: "left",
+    maxWidth: 600,
+    cardHeader: "Setting Records",
+    description: (
+      <>
+        This year's game "Rebuilt" challenges teams to score "fuel" into the "hub" as quickly as possible. The catch is, points scored in the hub only count during your "shift", which alternates every 25 seconds between the red and blue alliance. This alternating pattern requires close coordination and benefits teams that can score as quickly as possible even under defense. Team 226 and alliance members set event high score of 568 points.
+      </>
+    ),
+
+    slides: [
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=yISE-72afTE",
+        videoId: "yISE-72afTE",
       },
     ],
   },
@@ -40,10 +98,8 @@ export const sections = [
     cardHeader: "State + World Championship",
     description: (
       <>
-        I acted as the drive team coach and led the team to become a{" "}
-        <strong>Division Winner at the State Championship</strong> and attend
-        the <strong>World Championship</strong> for the first time in their
-        school's history.{" "}
+        By developing strong engineering skills in students, I've helped them to be <strong>Division Winners at the Michigan State Championship</strong> and qualify for
+        the <strong>World Championship</strong> for the past 3 years.{" "}
       </>
     ),
 
@@ -51,69 +107,20 @@ export const sections = [
       {
         description: "",
 
-        src: require("../assets/FRC_Robot_Championship.jpg"),
+        src: require("../assets/226/W_2.jpg"),
       },
     ],
   },
-  {
-    id: 0,
-    imageFloat: "left",
-    maxWidth: 700,
-    cardHeader: "State + World Championship",
-    description: (
-      <>
-        I acted as the drive team coach and led the team to become a{" "}
-        <strong>Division Winner at the State Championship</strong> and attend
-        the <strong>World Championship</strong> for the first time in their
-        school's history.{" "}
-      </>
-    ),
 
-    slides: [
-      {
-        type: "custom-slide",
-        src: "https://www.youtube.com/embed/ewtG-txRmU0",
-        videoId: "ewtG-txRmU0",
-      },
-    ],
-  },
-  {
-    id: 1,
-    imageFloat: "right",
-    maxWidth: 650,
-    cardHeader: "Robot CAD",
-    description: (
-      <>
-        The design of the robot was decided by the students with the mentors
-        providing necessary assistance to turn their ideas into a CAD model.
-        Once the critical dimensions were laid out the students were completely
-        responsible for building the robot. This model was made in Fusion 360
-        and is comprised of a main 2-stage elevator, a slider, and an intake.
-      </>
-    ),
 
-    slides: [
-      {
-        description: "",
-
-        src: require("../assets/FRC_Robot_CAD.jpg"),
-      },
-    ],
-  },
   {
     id: 2,
     imageFloat: "left",
-    maxWidth: 450,
-    cardHeader: "Finished Build",
+    maxWidth: 550,
+    cardHeader: "Build Process",
     description: (
       <>
-        With the FRC game containing a seesaw-like field element and agressive
-        robot-robot contact, the team prioritized a robot with a low center of
-        gravity and good protection of critical components such as sensors and
-        control circuits. The design of the robot was decided by the students
-        with the mentors providing necessary assistance to turn their ideas into
-        a CAD model. This model was made in Fusion 360 and is comprised of a
-        main 2-stage elevator, a slider, and an intake.
+        The team builds the robot in the 6 weeks between the game reveal and the competition. As a mentor I'm responsible for guiding the students through an engineering design process. We iterate on prototypes, improve the CAD, manufacture components, complete assemblies, conduct testing and tuning of subsystems to optimize performance, integrate the subsystems, and complete full robot battle testing.
       </>
     ),
 
@@ -121,29 +128,7 @@ export const sections = [
       {
         description: "",
 
-        src: require("../assets/FRC_Robot_Standalone.jpg"),
-      },
-    ],
-  },
-  {
-    id: 2,
-    imageFloat: "right",
-    maxWidth: 700,
-    cardHeader: "Robot Balancing",
-    description: (
-      <>
-        The endgame of each match involves the two alliances trying to have as
-        many robots as they can balance on the "charge station", a see-saw like
-        platform. Teams score points for getting onto the charge station and
-        extra points for successfully balancing on the charge station.
-      </>
-    ),
-
-    slides: [
-      {
-        description: "",
-
-        src: require("../assets/FRC_Robot_Ramp.jpg"),
+        src: require("../assets/226/finished_robot.jpg"),
       },
     ],
   },

@@ -6,61 +6,77 @@ export const projectContent = [
     title: "FRC Robotics Mentor",
     description: (
       <>
-        <strong>
-          I am the lead technical mentor for Team 5901, the Electric Eels, a
-          Detroit based high school robotics team.
-        </strong>
-        They compete in the FIRST Robotics Competition, an internation
-        competition serving more than 3,000 teams and 54,000 students.
-        <strong>
-          {" "}
-          As the lead technical mentor I led the students through design,
-          manufacturing, wiring, programming, and testing.{" "}
-        </strong>
-        Additionally, I acted as the drive team coach and led the team to become
-        a <strong>Division Winner at the State Championship</strong> and attend
-        the <strong>World Championship</strong> for the first time in their
-        school's history.{" "}
+        
+         I am the <strong> lead engineering mentor</strong> for Team 226 Hammerheads, a Troy Michigan
+    based high school robotics team. They compete in the FIRST Robotics Competition, an international
+        competition serving more than <strong>3,000 teams and 54,000 students.</strong>
+        <br /><br />
+          As the lead technical mentor I lead the students through strategy, design, fabrication,
+          assembly, wiring, programming, and testing.{" "}
+        By developing strong engineering skills in students, I've helped them to be <strong>Division Winners at the Michigan State Championship</strong> and qualify for
+        the <strong>World Championship</strong> for the past 3 years.{" "}
       </>
     ),
 
     skills: [
       "Leadership",
       "Mechanical Design",
-      "CAD",
+      "Onshape",
       "Electrical",
-      "Testing",
+      "Vision Systems",
       "Java",
     ],
     slides: [
       {
         description:
-          "Team 5901, the Electric Eels, placing a game piece during the FRC World Championship.",
+          "Team 226 2026 Robot CAD for the 2026 FRC Game \"Rebuilt\".",
 
-        src: require("../assets/FRC_Robot_Championship.jpg"),
+        src: require("../assets/226/Triton_CAD.jpg"),
       },
       {
         description:
-          "Team 5901 and mentors at the robot pit during competition.",
+          "Team 226 Robot on field during a match.",
 
-        src: require("../assets/FRC_Robot_Championship_Team.jpg"),
+        src: require("../assets/226/2026_Lake_City.jpg"),
+      },      
+      {
+        description:
+          "Team 226's robot 'Triton' volleying balls into the goal to score points.",
+        src: require("../assets/226/W_2.jpg"),
       },
       {
-        description: "Team 5901 and alliance members becoming State Division Champion",
+        description: "Team 226 and alliance members set event high score of 568 points.",
         type: "custom-slide",
-        src: "https://www.youtube.com/embed/ewtG-txRmU0",
-        videoId: "ewtG-txRmU0",
+        src: "https://www.youtube.com/watch?v=yISE-72afTE",
+        videoId: "yISE-72afTE",
       },
 
       {
-        description: "Team 5901 showing the robot to the judges.",
-        src: require("../assets/FRC_Robot_Judging.png"),
+        description: "Team 226's robot 'Triton' volleying balls into the goal to score points.",
+        src: require("../assets/226/Triton_Volleying.jpg"),
+      },      
+
+      {
+        description:
+          "The vision system allows the robot to see april tags around the field for localization.",
+        src: require("../assets/226/vision_system.gif"),
       },
       {
         description:
-          "The robot CAD created in Fusion 360 with a representation of the scoring positions.",
-        src: require("../assets/FRC_Robot_CAD.jpg"),
+          "The turret shooter can spin about its axis, change its hood angle, and precisely control its shooting speed.",
+        src: require("../assets/226/turret_shooter_cad.jpg"),
       },
+      {
+        description:
+          "The intake system allows the robot to pick up and store game pieces.",
+        src: require("../assets/226/intake_CAD.jpg"),
+      },
+      {
+        description:
+          "The indexing system feeds the balls from the hopper to the dual shooters.",
+        src: require("../assets/226/indexer_CAD.jpg"),
+      },
+
     ],
 
     links: {
@@ -132,8 +148,33 @@ export const projectContent = [
       url: "/granular-jamming-arm",
     },
   },
-  {
+    {
     id: 3,
+    title: "VLA Enabled Robot Arm",
+    description:
+      "A low cost robot arm for experimenting with VLA models. The arm is 3D printed and makes use of cost effective closed-loop servos. The robot arm is trained via a leader follower setup. ",
+    skills: ["VLAs", "Onshape", "Mechanical Design", "Design for 3D Printing"],
+    slides: [
+      {
+        description: "Low Cost VLA Enabled Robot Arm",
+        src: require("../assets/LCRA/LCRA_1.png"),
+      },
+      {
+        description: "Low Cost VLA Enabled Robot Arm",
+        src: require("../assets/LCRA/LCRA_3.jpg"),
+      },
+            {
+        description: "Progress on arm assembly.",
+        src: require("../assets/LCRA/LCRA_5.jpg"),
+      },
+
+    ],
+    links: {
+      url: "/",
+    },
+  },
+  {
+    id: 4,
     title: "Low-Cost Autonomous Navigation Platform",
     description:
       "A product concept design and working core technology prototype for indoor delivery in large buildings such as apartments and office spaces, reducing person to person contact and increasing delivery speed. The robot runs on ROS (coded in C++ and Python) and uses LIDAR plus odometry data for SLAM based navigation",
@@ -166,7 +207,7 @@ export const projectContent = [
     },
   },
   {
-    id: 4,
+    id: 5,
     title: "Custom CNC",
     description:
       "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
@@ -195,8 +236,8 @@ export const projectContent = [
     },
   },
   {
-    id: 5,
-    title: "3D Printer Enclosure",
+    id: 6,
+    title: "Smart 3D Printer Enclosure",
     description: (
       <>
         I built a custom{" "}
@@ -238,9 +279,54 @@ export const projectContent = [
       url: "/smart-printer",
     },
   },
+    {
+    id: 7,
+    title: "Robo Dog V2",
+    description: (
+      <>
+        A significantly larger and more advanced version of the original Robo Dog. The robot features 12 DOF, a more powerful onboard computer, and a more robust design overall. The robot is designed to be relatively afforable and can mostly be made with 3D printing and laser cutting.
+      </>
+    ),
+    skills: ["Solidworks", "3D Printing", "Electronics", "ROS", "Brushless Motors"],
+    slides: [
+      {
+        description:
+          "Nearly Complete Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
+        src: require("../assets/Robodog/dog_1.png"),
+      },
+      {
+        description:
+          "Cutaway showing internals and drive motor packaging.",
+        src: require("../assets/Robodog/dog_2.png"),
+      },
+      {
+        description:
+          "Electronics internals featuring a raspberry pi for motor control, a Jetson Nano for vision processing, a custom battery pack, and vision sensors.",
+        src: require("../assets/Robodog/dog_3.png"),
+      },
+      {
+        description:
+          "Generatively designed components for mounting the front sensor package, and embedded heat sink for motor drivers.",
+        src: require("../assets/Robodog/dog_4.png"),
+      },
+      {
+        description:
+          "Progress on leg assembly. The leg features a unique linkage design by using a large pitch lead screw, achieving a significant reduction in the size of the leg while maintaining a large range of motion and the ability to back drive the mechanism.",
+        src: require("../assets/Robodog/Robodog_Leg_mech.jpg"),
+      },
+            {
+        description:
+          "Progress on leg motor drive unit.",
+        src: require("../assets/Robodog/Robodog_Motor.jpg"),
+      },
+    ],
+    links: {
+      url: "/",
+    },
+  },
   {
-    id: 6,
-    title: "Walking Quadruped",
+    id: 7,
+    title: "Robo Dog V1",
     description: (
       <>
         A small walking quadruped inspired by Spot from Boston Dynamics. The

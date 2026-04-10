@@ -14,15 +14,14 @@ export const intro = (
 export const sections = [
   {
     id: 0,
-    imageFloat: "left",
+    imageFloat: "right",
     maxWidth: 500,
     cardHeader: "This Website! ",
     description: (
       <>
-        I built this website in React.js using the MUI styling framework and
-        some styled elements from Roei Yaacobi on Github. I used React Router to
-        handle the pages, Framer Motion for the animations, Three.js and Lamina
-        for the interactive model on the homepage, and a highly modular media carousel and page layout component. The code is automatically
+        I built this website in React.js using a variety of frameworks. I used React Router to
+        handle the pages, Framer Motion for the animations, Three.js and Lamina for the interactive model on the homepage, the MUI styling framework and style components from Roei Yaacobi on Github. 
+        and a highly modular media carousel and page layout component. The code is automatically
         deployed via a Github action when a pull request is submitted.
       </>
     ),
@@ -37,6 +36,30 @@ export const sections = [
 
         src: require("../assets/Website_Mobile.JPG"),
       },
+    ],
+  },
+  {
+    id: 2,
+    imageFloat: "left",
+    maxWidth: 500,
+    cardHeader: "Custom Yolo Training Pipeline for Hailo AI Accelerator",
+    description: (
+      <>
+        I wrote a custom training pipeline in Python to train Yolo models for deployment on the Hailo AI accelerator. This pipeline includes data augmentation, model training, and conversion to the Hailo model format. 
+      </>
+    ),
+
+    slides: [
+                  {
+        description: "",
+
+        src: require("../assets/hailo_chip.jpg"),
+      },{
+        description: "",
+
+        src: require("../assets/yolo_train.jpg"),
+      },
+
     ],
   },
   {
@@ -67,11 +90,12 @@ export const sections = [
       },
     ],
   },
+  
   {
     id: 2,
     imageFloat: "left",
     maxWidth: 500,
-    cardHeader: "Robot Arm Motion Control and Vision System ",
+    cardHeader: "Robot Arm Motion Control and Basic Vision System ",
     description: (
       <>
         I wrote the vision code for the granular jamming robot to determine when

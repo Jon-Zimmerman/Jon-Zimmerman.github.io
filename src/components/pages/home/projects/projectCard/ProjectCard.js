@@ -36,7 +36,7 @@ const ProjectCard = (props) => {
           </Typography>
           <div className={classes.allChips}>
             {project.skills.map((skills, index) => (
-              <Chip className={classes.chip} label={skills} key={index} />
+              <Chip className={classes.chip} label={skills} variant="outlined" size="small" key={index} />
             ))}
           </div>
           <CardButtons links={project.links} />

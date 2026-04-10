@@ -175,112 +175,6 @@ export const projectContent = [
   },
   {
     id: 4,
-    title: "Low-Cost Autonomous Navigation Platform",
-    description:
-      "A product concept design and working core technology prototype for indoor delivery in large buildings such as apartments and office spaces, reducing person to person contact and increasing delivery speed. The robot runs on ROS (coded in C++ and Python) and uses LIDAR plus odometry data for SLAM based navigation",
-    skills: ["ROS", "C++", "Arduino", "SLAM"],
-    slides: [
-      {
-        description: "HopperBot Delivery Robot Concept",
-        src: require("../assets/HopperBot_Render.webp"),
-      },
-      {
-        type: "custom-slide",
-        src: "https://www.youtube.com/watch?v=KSGEKOYDzTs",
-        videoId: "KSGEKOYDzTs",
-      },
-      {
-        description: "HopperBot Tech",
-        src: require("../assets/HopperBot_Tech.webp"),
-      },
-      {
-        description: "HopperBot Lidar",
-        src: require("../assets/HopperBot_Lidar.webp"),
-      },
-      {
-        description: "HopperBot Electrical",
-        src: require("../assets/HopperBot_Electrical.webp"),
-      },
-    ],
-    links: {
-      url: "/hopperbot",
-    },
-  },
-  {
-    id: 5,
-    title: "Custom CNC",
-    description:
-      "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
-    skills: ["CAD", "Electronics", "Mechanism Design", "CAM"],
-    slides: [
-      {
-        description: "Custom CNC CAD",
-        src: require("../assets/CNC_Version_2.PNG"),
-      },
-      {
-        description: "Custom CNC Toolpath",
-        src: require("../assets/CNC_Toolpath.webp"),
-      },
-      {
-        type: "custom-slide",
-        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
-        videoId: "0xI43rbJjB0",
-      },
-      {
-        description: 'Custom CNC mountain cut from a 2" piece of wood',
-        src: require("../assets/mountain cnc.jpg"),
-      },
-    ],
-    links: {
-      url: "/custom-cnc",
-    },
-  },
-  {
-    id: 6,
-    title: "Smart 3D Printer Enclosure",
-    description: (
-      <>
-        I built a custom{" "}
-        <strong>
-          Smart 3D Printer Enclosure with a variable speed fume extraction fan,
-          temperature and humidity tracking, and a custom plugin for Ocotprint,
-          a remote web-based management tool.
-        </strong>{" "}
-        The fan speed is controlled by a PID loop with sensor input from the
-        enclosure temperature sensor. This maintains the enclosure at an optimal
-        temperature while removing VOCs and ultrafine particles and venting them
-        to the outside.
-      </>
-    ),
-    skills: ["CAD", "3D Printing", "Electronics", "Python"],
-    slides: [
-      {
-        description: "3D printer rendering of front",
-        src: require("../assets/Printer_Render.png"),
-      },      
-      {
-        description: "3D printer rendering of fan system",
-        src: require("../assets/Fan_Render.JPG"),
-      },
-         {
-        description: "3D printer enclosure front",
-        src: require("../assets/Printer_Front.jpg"),
-      },
-      {
-        description: "3D printer enclosure custom electronics and fan",
-        src: require("../assets/Printer_Rear.jpg"),
-      },
-      {
-        description: "3D printer enclosure plugin",
-        src: require("../assets/Printer_Plugin.jpg"),
-      },
-    ],
-    links: {
-      url: "/smart-printer",
-    },
-  },
-    {
-    id: 7,
     title: "Robo Dog V2",
     description: (
       <>
@@ -325,7 +219,114 @@ export const projectContent = [
     },
   },
   {
+    id: 5,
+    title: "Low-Cost Autonomous Navigation Platform",
+    description:
+      "A product concept design and working core technology prototype for indoor delivery in large buildings such as apartments and office spaces, reducing person to person contact and increasing delivery speed. The robot runs on ROS (coded in C++ and Python) and uses LIDAR plus odometry data for SLAM based navigation",
+    skills: ["ROS", "C++", "Arduino", "SLAM"],
+    slides: [
+      {
+        description: "HopperBot Delivery Robot Concept",
+        src: require("../assets/HopperBot_Render.webp"),
+      },
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=KSGEKOYDzTs",
+        videoId: "KSGEKOYDzTs",
+      },
+      {
+        description: "HopperBot Tech",
+        src: require("../assets/HopperBot_Tech.webp"),
+      },
+      {
+        description: "HopperBot Lidar",
+        src: require("../assets/HopperBot_Lidar.webp"),
+      },
+      {
+        description: "HopperBot Electrical",
+        src: require("../assets/HopperBot_Electrical.webp"),
+      },
+    ],
+    links: {
+      url: "/hopperbot",
+    },
+  },
+  {
+    id: 6,
+    title: "Custom CNC",
+    description:
+      "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
+    skills: ["CAD", "Electronics", "Mechanism Design", "CAM"],
+    slides: [
+      {
+        description: "Custom CNC CAD",
+        src: require("../assets/CNC_Version_2.PNG"),
+      },
+      {
+        description: "Custom CNC Toolpath",
+        src: require("../assets/CNC_Toolpath.webp"),
+      },
+      {
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
+        videoId: "0xI43rbJjB0",
+      },
+      {
+        description: 'Custom CNC mountain cut from a 2" piece of wood',
+        src: require("../assets/mountain cnc.jpg"),
+      },
+    ],
+    links: {
+      url: "/custom-cnc",
+    },
+  },
+  {
     id: 7,
+    title: "Smart 3D Printer Enclosure",
+    description: (
+      <>
+        I built a custom{" "}
+        <strong>
+          Smart 3D Printer Enclosure with a variable speed fume extraction fan,
+          temperature and humidity tracking, and a custom plugin for Ocotprint,
+          a remote web-based management tool.
+        </strong>{" "}
+        The fan speed is controlled by a PID loop with sensor input from the
+        enclosure temperature sensor. This maintains the enclosure at an optimal
+        temperature while removing VOCs and ultrafine particles and venting them
+        to the outside.
+      </>
+    ),
+    skills: ["CAD", "3D Printing", "Electronics", "Python"],
+    slides: [
+      {
+        description: "3D printer rendering of front",
+        src: require("../assets/Printer_Render.png"),
+      },      
+      {
+        description: "3D printer rendering of fan system",
+        src: require("../assets/Fan_Render.JPG"),
+      },
+         {
+        description: "3D printer enclosure front",
+        src: require("../assets/Printer_Front.jpg"),
+      },
+      {
+        description: "3D printer enclosure custom electronics and fan",
+        src: require("../assets/Printer_Rear.jpg"),
+      },
+      {
+        description: "3D printer enclosure plugin",
+        src: require("../assets/Printer_Plugin.jpg"),
+      },
+    ],
+    links: {
+      url: "/smart-printer",
+    },
+  },
+    
+  {
+    id: 8,
     title: "Robo Dog V1",
     description: (
       <>

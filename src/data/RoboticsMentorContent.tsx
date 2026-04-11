@@ -3,8 +3,8 @@ declare var require: any;
 export const title = "FIRST Robotics Mentor";
 export const intro = (
   <>
-    I am the lead engineering mentor for FIRST Robotics Competition Team 226 Hammerheads, a Troy Michigan
-    based high school robotics team.{" "}
+    {/* I am the lead engineering mentor for FIRST Robotics Competition Team 226 Hammerheads, a Troy Michigan
+    based high school robotics team.{" "} */}
   </>
 );
 
@@ -51,14 +51,14 @@ export const sections = [
       {
         description: "",
 
-        src: require("../assets/226/2026_Lake_City.jpg"),
+        src: require("../assets/226/2026_Lake_City_2.jpg"),
       },
     ],
   },
     {
     id: 1,
     imageFloat: "right",
-    maxWidth: 650,
+    maxWidth: 600,
     cardHeader: "Robot CAD",
     description: (
       <>
@@ -66,9 +66,24 @@ export const sections = [
       </>),
       slides: [
       {
-        description: "",
+        description: "Full robot CAD",
 
         src: require("../assets/226/Triton_CAD_2.jpg"),
+      },
+      {
+        description:
+          "The turret shooter can spin about its axis, change its hood angle, and precisely control its shooting speed.",
+        src: require("../assets/226/turret_shooter_cad.jpg"),
+      },
+      {
+        description:
+          "The intake system allows the robot to pick up and store game pieces.",
+        src: require("../assets/226/intake_CAD.jpg"),
+      },
+      {
+        description:
+          "The indexing system feeds the balls from the hopper to the dual shooters.",
+        src: require("../assets/226/indexer_CAD.jpg"),
       },
     ],
   },

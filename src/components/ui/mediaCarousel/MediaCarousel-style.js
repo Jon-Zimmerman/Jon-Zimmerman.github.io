@@ -5,29 +5,22 @@ export const styles = (theme) => ({
   },
 
   video: {
-    width: "10vw",
-    height: "auto!important",
-    aspectRatio: "16/9!important",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexGrow: 1,
-    [theme.breakpoints.down("lg")]: {
-      width: "50vw",
-    },
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
   },
 
   videoBox: {
     position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "95%",
-    //height: "95%",    
-    height: "min-content",
-    margin: "0",    
-    alignSelf: "center",
-   
+    display: "block",
+    width: "100%",
+    maxWidth: "100%",
+    paddingBottom: "55%",
+    marginBottom: "15%",
+    marginTop: "15%",
+    minHeight: 0,
   },
 
   arrows: {
@@ -76,12 +69,13 @@ export const styles = (theme) => ({
       display: "none",
     },
     " iframe": {
-      paddingBottom: "22.5px",
-      paddingTop: "22.5px",
+      paddingBottom: "0",
+      paddingTop: "0",
     },
     " .selected": {
       display: "flex",
       justifyContent: "center",
+      alignItems: "center",
     },
     ".animated": {
       maxHeight: "650px!important",
@@ -111,6 +105,7 @@ export const styles = (theme) => ({
     [theme.breakpoints.down("md")]: {
       bottom: "0px",
       position: "relative",
+      marginTop: "0.75rem",
     },
   },  
   descriptionPage: {
@@ -127,6 +122,7 @@ export const styles = (theme) => ({
     [theme.breakpoints.down("md")]: {
       bottom: "0px",
       position: "relative",
+      marginTop: "0.75rem",
     },
   },
 });

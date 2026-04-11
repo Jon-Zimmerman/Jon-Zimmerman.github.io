@@ -29,7 +29,7 @@ export const projectContent = [
     slides: [
       {
         description:
-          "Team 226 2026 Robot CAD for the 2026 FRC Game \"Rebuilt\".",
+          "Team 226's Robot CAD for the 2026 FRC Game \"Rebuilt\" made in Onshape.",
 
         src: require("../assets/226/Triton_CAD.jpg"),
       },
@@ -37,7 +37,7 @@ export const projectContent = [
         description:
           "Team 226 Robot on field during a match.",
 
-        src: require("../assets/226/2026_Lake_City.jpg"),
+        src: require("../assets/226/2026_Lake_City_2.jpg"),
       },      
       {
         description:
@@ -226,7 +226,7 @@ export const projectContent = [
     skills: ["ROS", "C++", "Arduino", "SLAM"],
     slides: [
       {
-        description: "HopperBot Delivery Robot Concept",
+        description: "HopperBot Delivery Robot Concept (3D Render)",
         src: require("../assets/HopperBot_Render.webp"),
       },
       {

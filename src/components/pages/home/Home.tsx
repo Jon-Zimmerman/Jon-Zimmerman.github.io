@@ -5,6 +5,7 @@ import { CircularProgress, Box } from "@mui/material";
 import Header from "./header/Header.js";
 import About from "./about/About.js";
 import Experience from "./experience/Experience.js";
+import Patents from "./patents/Patents.js";
 
 const Projects = React.lazy(() => import('./projects/Projects.js'));
 function Home(props) {
@@ -13,6 +14,7 @@ function Home(props) {
       <Header></Header>
       <About></About>
       <Experience></Experience>
+      <Patents></Patents>
       <Suspense fallback={<Box display="flex" justifyContent="center" alignItems="center" minHeight="200px"><CircularProgress /></Box>}>
         <Projects {...props}></Projects>
       </Suspense>

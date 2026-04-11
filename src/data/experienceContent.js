@@ -15,7 +15,7 @@ const jobs = [
         printing, and laser cutting.
       </>,
       <>
-            Received two <strong>Global Manufacturing Technical Excellence Awards</strong> for developing a new automation processes and tooling.
+            Received two <strong>Global Manufacturing Technical Excellence Awards</strong> for developing new automation processes and tooling.
       </>,
       <>
         Developed critical <strong>mechanical design, prototyping, web design, and robotics

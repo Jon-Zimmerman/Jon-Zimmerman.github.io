@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 declare var require: any;
 
 // Note: Add patent images to src/assets/patents/ as patent1.jpg, patent2.jpg, patent3.jpg

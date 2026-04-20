@@ -40,10 +40,6 @@ export const PathStructure = [
         href: "/smart-printer",
       },
     ],
-  },
-  {
-    name: "Education",
-    href: "/education",
   },  
   {
     name: "Software",
@@ -53,4 +49,9 @@ export const PathStructure = [
     name: "Art",
     href: "/art",
   },
+  {
+    name: "Education",
+    href: "/education",
+  },  
+
 ];

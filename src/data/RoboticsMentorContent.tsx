@@ -34,7 +34,7 @@ export const sections = [
     ],
   },
     {
-    id: 0,
+    id: 1,
     imageFloat: "left",
     maxWidth: 600,
     cardHeader: "Competition",
@@ -56,7 +56,7 @@ export const sections = [
     ],
   },
     {
-    id: 1,
+    id: 2,
     imageFloat: "right",
     maxWidth: 600,
     cardHeader: "Robot CAD",
@@ -88,13 +88,13 @@ export const sections = [
     ],
   },
     {
-    id: 0,
+    id: 3,
     imageFloat: "left",
     maxWidth: 600,
     cardHeader: "Setting Records",
     description: (
       <>
-        This year's game "Rebuilt" challenges teams to score "fuel" into the "hub" as quickly as possible. The catch is, points scored in the hub only count during your "shift", which alternates every 25 seconds between the red and blue alliance. This alternating pattern requires close coordination and benefits teams that can score as quickly as possible even under defense. Team 226 and alliance members set event high score of 568 points.
+        This year's game "Rebuilt" challenges teams to score "fuel" into the "hub" as quickly as possible. The catch is, points scored in the hub only count during your "shift", which alternates every 25 seconds between the red and blue alliance. This alternating pattern requires close coordination and benefits teams that can score as quickly as possible even under defense. In the video shown 226 and alliance members set an event high score of 568 points.
       </>
     ),
 
@@ -107,7 +107,7 @@ export const sections = [
     ],
   },
   {
-    id: 0,
+    id: 4,
     imageFloat: "right",
     maxWidth: 600,
     cardHeader: "State + World Championship",
@@ -129,7 +129,7 @@ export const sections = [
 
 
   {
-    id: 2,
+    id: 5,
     imageFloat: "left",
     maxWidth: 550,
     cardHeader: "Build Process",
@@ -144,6 +144,73 @@ export const sections = [
         description: "",
 
         src: require("../assets/226/finished_robot.jpg"),
+      },
+    ],
+  },
+  
+  {
+    id: 6,
+    imageFloat: "right",
+    maxWidth: 500,
+    cardHeader: "Robot in a Box Learning Tool",
+    description: (
+      <>
+        To help programming students learn the fundamentals of robot programming, I developed a "Robot in a Box" tool that allows them to practice coding and debugging more easily by having all of the controls hardware pre-configured.
+        To make sure it's robust enough to be in a machine shop and hold a 12 lb battery, it's constructed out of a milk crate. This makes it easy to stack multiple robot in a box kits.
+        The Robot in a Box can be connected to up to 20 motors, sensors and other devices that would go on a competition robot.
+      </>
+    ),
+
+    slides: [
+      {
+        description: "Robot in a Box model",
+
+        src: require("../assets/226/RIAB.jpg"),
+      },
+            {
+        description: "Robot in a Box electrical wiring",
+
+
+        src: require("../assets/226/RIAB_electrical.jpg"),
+      },
+            {
+        description: "Robot in a Box electrical wiring",
+
+        src: require("../assets/226/RIAB_electrical_2.jpg"),
+      },
+            {
+        description: "Robot in a Box physical build",
+
+        src: require("../assets/226/RIAB_Real.jpg"),
+      },
+    ],
+  },
+  {
+    id: 7,
+    imageFloat: "left",
+    maxWidth: 450,
+    cardHeader: "Pit Workbench Build",
+    description: (
+      <>
+       At competitions the team works out of a "pit" just like nascar teams. The pit is where we do repairs, maintenance, and tuning of the robot between matches. To make our pit more functional, I designed and built a custom workbench with integrated power distribution and a computer mount for programming and diagnostics.
+      </>
+    ),
+
+    slides: [
+      {
+        description: "Pit Workbench Model",
+
+        src: require("../assets/226/Pit_Workbench.jpg"),
+      },
+      {
+        description: "Pit Workbench Build",
+
+        src: require("../assets/226/workbench.jpg"),
+      },
+      {
+        description: "Pit Workbench at Competition",
+
+        src: require("../assets/226/workbench2.jpg"),
       },
     ],
   },

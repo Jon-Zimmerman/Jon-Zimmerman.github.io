@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <div className={classes.footerContent}>
-        <p className={classes.copyright}>Copyright © 2023
+        <p className={classes.copyright}>Copyright © 2026 -
           <span className={classes.colorText}> Jon Zimmerman</span>
         </p>
 

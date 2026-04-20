@@ -14,7 +14,7 @@ export const projectContent = [
           As the lead technical mentor I lead the students through strategy, design, fabrication,
           assembly, wiring, programming, and testing.{" "}
         By developing strong engineering skills in students, I've helped them to be <strong>Division Winners at the Michigan State Championship</strong> and qualify for
-        the <strong>World Championship</strong> for the past 3 years.{" "}
+        the <strong>World Championship</strong>.{" "}
       </>
     ),
 
@@ -92,7 +92,7 @@ export const projectContent = [
         <strong>
           {" "}
           7-DOF robot to experiment with implementing granular jamming into the
-          hand of a anthropomorphic arm for use as an interactive animatronic or
+          hand of an anthropomorphic arm for use as an interactive animatronic or
           general purpose humanoid robot.
         </strong>{" "}
         in the robots hand small granules of material are contained in a
@@ -185,8 +185,8 @@ export const projectContent = [
     slides: [
       {
         description:
-          "Nearly Complete Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
-        src: require("../assets/Robodog/dog_1.png"),
+          "Complete Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
+        src: require("../assets/Robodog/Robodog_CAD.jpg"),
       },
       {
         description:
@@ -325,43 +325,43 @@ export const projectContent = [
     },
   },
     
-  {
-    id: 8,
-    title: "Robo Dog V1",
-    description: (
-      <>
-        A small walking quadruped inspired by Spot from Boston Dynamics. The
-        compact design created many design challenges to overcome. The robot was
-        designed to meet the available manufacturing methods and was formed
-        almost entirely with a 3D printer with some parts coming from my custom
-        built CNC machine.
-      </>
-    ),
-    skills: ["CAD", "3D Printing", "Electronics", "Arduino", "C/C++"],
-    slides: [
-      {
-        description:
-          "Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
-        src: require("../assets/Spot_Micro_CAD.PNG"),
-      },
-      {
-        description:
-          "Close up of leg design with secondary motor 4 bar to allow for motor to be more concealed and protected.",
-        src: require("../assets/Spot_Micro_Leg.PNG"),
-      },
-      {
-        description:
-          "This part was cut on my custom build CNC to ensire precise hole aligment and overall shape to fit within the 3d printed shell.",
-        src: require("../assets/CNC_Finished_Part.jpg"),
-      },
-      {
-        description:
-          "The robot was printed out of PLA and features 8 servos and two ultrasonic sensors for basic obstacle avoidance.",
-        src: require("../assets/Spot_Micro_Real.jpg"),
-      },
-    ],
-    links: {
-      url: "/spot-micro",
-    },
-  },
+  // {
+  //   id: 8,
+  //   title: "Robo Dog V1",
+  //   description: (
+  //     <>
+  //       A small walking quadruped inspired by Spot from Boston Dynamics. The
+  //       compact design created many design challenges to overcome. The robot was
+  //       designed to meet the available manufacturing methods and was formed
+  //       almost entirely with a 3D printer with some parts coming from my custom
+  //       built CNC machine.
+  //     </>
+  //   ),
+  //   skills: ["CAD", "3D Printing", "Electronics", "Arduino", "C/C++"],
+  //   slides: [
+  //     {
+  //       description:
+  //         "Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
+  //       src: require("../assets/Spot_Micro_CAD.PNG"),
+  //     },
+  //     {
+  //       description:
+  //         "Close up of leg design with secondary motor 4 bar to allow for motor to be more concealed and protected.",
+  //       src: require("../assets/Spot_Micro_Leg.PNG"),
+  //     },
+  //     {
+  //       description:
+  //         "This part was cut on my custom build CNC to ensire precise hole aligment and overall shape to fit within the 3d printed shell.",
+  //       src: require("../assets/CNC_Finished_Part.jpg"),
+  //     },
+  //     {
+  //       description:
+  //         "The robot was printed out of PLA and features 8 servos and two ultrasonic sensors for basic obstacle avoidance.",
+  //       src: require("../assets/Spot_Micro_Real.jpg"),
+  //     },
+  //   ],
+  //   links: {
+  //     url: "/spot-micro",
+  //   },
+  // },
 ];

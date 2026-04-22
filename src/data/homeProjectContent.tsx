@@ -178,7 +178,7 @@ export const projectContent = [
     title: "Robo Dog V2",
     description: (
       <>
-        A significantly larger and more advanced version of the original Robo Dog. The robot features 12 DOF, a more powerful onboard computer, and a more robust design overall. The robot is designed to be relatively afforable and can mostly be made with 3D printing and laser cutting.
+        A significantly larger and more advanced version of my original Robo Dog. The robot features 12 DOF, a more powerful onboard computer, and a more robust design overall. The robot is designed to be relatively afforable and can mostly be made with 3D printing and laser cutting.
       </>
     ),
     skills: ["Solidworks", "3D Printing", "Electronics", "ROS", "Brushless Motors"],
@@ -196,7 +196,7 @@ export const projectContent = [
       {
         description:
           "Electronics internals featuring a raspberry pi for motor control, a Jetson Nano for vision processing, a custom battery pack, and vision sensors.",
-        src: require("../assets/Robodog/dog_3.png"),
+        src: require("../assets/Robodog/Robodog_electrical.jpg"),
       },
       {
         description:

@@ -3,6 +3,43 @@ declare var require: any;
 export const projectContent = [
   {
     id: 1,
+    title: "Air Quality Sensor (Injection Molding Design)",
+    description: (
+      <>
+        "Airwave" is a custom built environmental monitoring device measuring{" "}
+        <strong>PM2.5 and PM10 particulate matter</strong>, <strong>volatile organic
+        compounds (VOCs),</strong> and ambient <strong>temperature, pressure, and humidity</strong>.
+        The sensor includes all of these data streams on a easy to read display in an aesthetically pleasing design to easily understand indoor or outdoor air quality.
+      </>
+    ),
+    skills: ["Onshape", "Sensor Integration", "I2C/SPI"],
+    slides: [
+      {
+        description: "Complete air quality sensor assembly with integrated sensors",
+        src: require("../assets/AQS/AQS_Main.jpg"),
+      },
+      {
+        description: "Rear view sensor assembly",
+        src: require("../assets/AQS/AQS_back.jpg"),
+      },
+            
+      {
+        description: "Exploded view showing sensor arrangement",
+        src: require("../assets/AQS/AQS_exploded.jpg"),
+      },{
+        description: "Rear shell of sensor enclosure",
+        src: require("../assets/AQS/AQS_rear_shell.jpg"),
+      },
+      {
+        description: "Draft angle analysis for injection molding",
+        src: require("../assets/AQS/AQS_draft_analysis.jpg"),
+      },
+    ],
+    links: {
+      url: "/air-quality-sensor",
+    },
+  },{
+    id: 2,
     title: "FRC Robotics Mentor",
     description: (
       <>
@@ -82,9 +119,77 @@ export const projectContent = [
     links: {
       url: "/first-robotics-mentor",
     },
+  },{
+    id: 3,
+    title: "VLA Enabled Robot Arm",
+    description:
+      "A low cost robot arm for experimenting with VLA models. The arm is 3D printed and makes use of cost effective closed-loop servos. The robot arm is trained via a leader follower setup. ",
+    skills: ["VLAs", "Onshape", "Mechanical Design", "Design for 3D Printing"],
+    slides: [
+      {
+        description: "Low Cost VLA Enabled Robot Arm",
+        src: require("../assets/LCRA/LCRA_1.png"),
+      },
+      {
+        description: "Low Cost VLA Enabled Robot Arm",
+        src: require("../assets/LCRA/LCRA_3.jpg"),
+      },
+            {
+        description: "Progress on arm assembly.",
+        src: require("../assets/LCRA/LCRA_6.jpg"),
+      },
+
+    ],
+    links: {
+      url: "/vla-enabled-robot-arm",
+    },
+  },{
+    id: 4,
+    title: "Robo Dog V2",
+    description: (
+      <>
+        A significantly larger and more advanced version of my original Robo Dog. The robot features 12 DOF, a more powerful onboard computer, and a more robust design overall. The robot is designed to be relatively afforable and can mostly be made with 3D printing and laser cutting.
+      </>
+    ),
+    skills: ["Solidworks", "3D Printing", "Electronics", "ROS", "Brushless Motors"],
+    slides: [
+      {
+        description:
+          "Complete Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
+        src: require("../assets/Robodog/Robodog_CAD.jpg"),
+      },
+      {
+        description:
+          "Cutaway showing internals and drive motor packaging.",
+        src: require("../assets/Robodog/dog_2.png"),
+      },
+      {
+        description:
+          "Electronics internals featuring a raspberry pi for motor control, a Jetson Nano for vision processing, a custom battery pack, and vision sensors.",
+        src: require("../assets/Robodog/Robodog_electrical.jpg"),
+      },
+      {
+        description:
+          "Generatively designed components for mounting the front sensor package, and embedded heat sink for motor drivers.",
+        src: require("../assets/Robodog/dog_4.png"),
+      },
+      {
+        description:
+          "Progress on leg assembly. The leg features a unique linkage design by using a large pitch lead screw, achieving a significant reduction in the size of the leg while maintaining a large range of motion and the ability to back drive the mechanism.",
+        src: require("../assets/Robodog/Robodog_Leg_mech.jpg"),
+      },
+            {
+        description:
+          "Progress on leg motor drive unit.",
+        src: require("../assets/Robodog/Robodog_Motor.jpg"),
+      },
+    ],
+    links: {
+      url: "/robo-dog-v2",
+    },
   },
   {
-    id: 2,
+    id: 5,
     title: "Robotics Research Granular Jamming Arm",
     description: (
       <>
@@ -148,78 +253,38 @@ export const projectContent = [
       url: "/granular-jamming-arm",
     },
   },
-    {
-    id: 3,
-    title: "VLA Enabled Robot Arm",
-    description:
-      "A low cost robot arm for experimenting with VLA models. The arm is 3D printed and makes use of cost effective closed-loop servos. The robot arm is trained via a leader follower setup. ",
-    skills: ["VLAs", "Onshape", "Mechanical Design", "Design for 3D Printing"],
-    slides: [
-      {
-        description: "Low Cost VLA Enabled Robot Arm",
-        src: require("../assets/LCRA/LCRA_1.png"),
-      },
-      {
-        description: "Low Cost VLA Enabled Robot Arm",
-        src: require("../assets/LCRA/LCRA_3.jpg"),
-      },
-            {
-        description: "Progress on arm assembly.",
-        src: require("../assets/LCRA/LCRA_5.jpg"),
-      },
 
-    ],
-    links: {
-      url: "/",
-    },
-  },
   {
-    id: 4,
-    title: "Robo Dog V2",
-    description: (
-      <>
-        A significantly larger and more advanced version of my original Robo Dog. The robot features 12 DOF, a more powerful onboard computer, and a more robust design overall. The robot is designed to be relatively afforable and can mostly be made with 3D printing and laser cutting.
-      </>
-    ),
-    skills: ["Solidworks", "3D Printing", "Electronics", "ROS", "Brushless Motors"],
+    id: 6,
+    title: "Custom CNC",
+    description:
+      "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
+    skills: ["CAD", "Electronics", "Mechanism Design", "CAM"],
     slides: [
       {
-        description:
-          "Complete Solidworks design of robot with fully detailed legs, sensors, motors, and body.",
-        src: require("../assets/Robodog/Robodog_CAD.jpg"),
+        description: "Custom CNC CAD",
+        src: require("../assets/CNC_Version_2.PNG"),
       },
       {
-        description:
-          "Cutaway showing internals and drive motor packaging.",
-        src: require("../assets/Robodog/dog_2.png"),
+        description: "Custom CNC Toolpath",
+        src: require("../assets/CNC_Toolpath.webp"),
       },
       {
-        description:
-          "Electronics internals featuring a raspberry pi for motor control, a Jetson Nano for vision processing, a custom battery pack, and vision sensors.",
-        src: require("../assets/Robodog/Robodog_electrical.jpg"),
+        type: "custom-slide",
+        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
+        videoId: "0xI43rbJjB0",
       },
       {
-        description:
-          "Generatively designed components for mounting the front sensor package, and embedded heat sink for motor drivers.",
-        src: require("../assets/Robodog/dog_4.png"),
-      },
-      {
-        description:
-          "Progress on leg assembly. The leg features a unique linkage design by using a large pitch lead screw, achieving a significant reduction in the size of the leg while maintaining a large range of motion and the ability to back drive the mechanism.",
-        src: require("../assets/Robodog/Robodog_Leg_mech.jpg"),
-      },
-            {
-        description:
-          "Progress on leg motor drive unit.",
-        src: require("../assets/Robodog/Robodog_Motor.jpg"),
+        description: 'Custom CNC mountain cut from a 2" piece of wood',
+        src: require("../assets/mountain cnc.jpg"),
       },
     ],
     links: {
-      url: "/",
+      url: "/custom-cnc",
     },
   },
   {
-    id: 5,
+    id: 7,
     title: "Low-Cost Autonomous Navigation Platform",
     description:
       "A product concept design and working core technology prototype for indoor delivery in large buildings such as apartments and office spaces, reducing person to person contact and increasing delivery speed. The robot runs on ROS (coded in C++ and Python) and uses LIDAR plus odometry data for SLAM based navigation",
@@ -252,36 +317,7 @@ export const projectContent = [
     },
   },
   {
-    id: 6,
-    title: "Custom CNC",
-    description:
-      "A fully operational and compact CNC machine capable of 3 axis machining. It runs CNCjs which enables remote file upload and management through a smartphone or computer. I modeled it in Solidworks, 3D printed, assembled, and learned CAM tool path creation.",
-    skills: ["CAD", "Electronics", "Mechanism Design", "CAM"],
-    slides: [
-      {
-        description: "Custom CNC CAD",
-        src: require("../assets/CNC_Version_2.PNG"),
-      },
-      {
-        description: "Custom CNC Toolpath",
-        src: require("../assets/CNC_Toolpath.webp"),
-      },
-      {
-        type: "custom-slide",
-        src: "https://www.youtube.com/watch?v=0xI43rbJjB0",
-        videoId: "0xI43rbJjB0",
-      },
-      {
-        description: 'Custom CNC mountain cut from a 2" piece of wood',
-        src: require("../assets/mountain cnc.jpg"),
-      },
-    ],
-    links: {
-      url: "/custom-cnc",
-    },
-  },
-  {
-    id: 7,
+    id: 8,
     title: "Smart 3D Printer Enclosure",
     description: (
       <>
@@ -324,6 +360,7 @@ export const projectContent = [
       url: "/smart-printer",
     },
   },
+
     
   // {
   //   id: 8,

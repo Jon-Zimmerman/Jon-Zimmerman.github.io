@@ -23,6 +23,9 @@ import SmartPrinter from "./components/pages/projectPages/SmartPrinter.js";
 import Education from "./components/pages/projectPages/Education.js";
 import Software from "./components/pages/projectPages/Software.js";
 import Art from "./components/pages/projectPages/Art.js";
+import AQS from "./components/pages/projectPages/AQS.js";
+import RoboDogV2 from "./components/pages/projectPages/RoboDogV2.js";
+import VLAEnabledRobotArm from "./components/pages/projectPages/VLAEnabledRobotArm.js";
 
 let initialTheme = false;
 //If the the value from the local storage equals to dark
@@ -102,6 +105,21 @@ function App() {
                   exact
                   path="/smart-printer"
                   element={<SmartPrinter />}
+                ></Route>
+                <Route
+                  exact
+                  path="/air-quality-sensor"
+                  element={<AQS />}
+                ></Route>
+                <Route
+                  exact
+                  path="/robo-dog-v2"
+                  element={<RoboDogV2 />}
+                ></Route>
+                <Route
+                  exact
+                  path="/vla-enabled-robot-arm"
+                  element={<VLAEnabledRobotArm />}
                 ></Route>
                 <Route exact path="/education" element={<Education />}></Route>
                 <Route exact path="/software" element={<Software />}></Route>

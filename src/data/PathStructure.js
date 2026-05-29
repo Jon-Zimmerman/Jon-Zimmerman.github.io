@@ -21,6 +21,14 @@ export const PathStructure = [
         href: "/hopperbot",
       },
       {
+        name: "Robo Dog V2",
+        href: "/robo-dog-v2",
+      },
+      {
+        name: "VLA Enabled Robot Arm",
+        href: "/vla-enabled-robot-arm",
+      },
+      {
         name: "Walking Quadruped",
         href: "/spot-micro",
       },
@@ -39,8 +47,12 @@ export const PathStructure = [
         name: "Smart 3D Printer Enclosure",
         href: "/smart-printer",
       },
+      {
+        name: "Air Quality Sensor",
+        href: "/air-quality-sensor",
+      },
     ],
-  },  
+  },
   {
     name: "Software",
     href: "/software",

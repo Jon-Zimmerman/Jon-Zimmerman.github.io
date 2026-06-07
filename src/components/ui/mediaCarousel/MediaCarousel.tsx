@@ -236,7 +236,11 @@ const MediaCarousel = (props) => {
                   className={`${
                     projectTypeCarousel ? classes.carouselImage : ""
                   } `}
-                  style={{ height: "100%", width: "auto" }}
+                  style={{ 
+                    objectFit: "contain",
+                    width: "100%",
+                    height: "100%"
+                  }}
                 >
                   <source src={mediaItem.src} type="video/mp4" />
                   Your browser does not support the video tag.

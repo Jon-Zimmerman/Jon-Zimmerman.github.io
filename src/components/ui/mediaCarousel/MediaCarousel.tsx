@@ -123,6 +123,33 @@ const MediaCarousel = (props) => {
                   //title={title}
                 />
               </React.Fragment>
+            ) : typeof slide.src === "string" && slide.src.endsWith(".mp4") ? (
+              <div
+                key={slide.src}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  controls
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    width: "auto",
+                    height: "auto",
+                  }}
+                >
+                  <source src={slide.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             ) : undefined,
         }}
       />
@@ -194,6 +221,38 @@ const MediaCarousel = (props) => {
                   </Typography>
                 ))
               }
+            </React.Fragment>
+          ) : typeof mediaItem.src === "string" && mediaItem.src.endsWith(".mp4") ? (
+            <React.Fragment key={mediaItem.src}>
+              <div
+                className={`${
+                  projectTypeCarousel ? classes.imgContainer : ""
+                } `}
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  className={`${
+                    projectTypeCarousel ? classes.carouselImage : ""
+                  } `}
+                  style={{ height: "100%", width: "auto" }}
+                >
+                  <source src={mediaItem.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <Typography
+                variant="body1"
+                key={mediaItem.description}
+                className={`${
+                  projectTypeCarousel
+                    ? classes.description
+                    : classes.descriptionPage
+                } `}
+              >
+                {mediaItem.description}
+              </Typography>
             </React.Fragment>
           ) : (
             <React.Fragment key={mediaItem.src}>

@@ -26,13 +26,26 @@ export const projectContent = [
       {
         description: "Exploded view showing sensor arrangement",
         src: require("../assets/AQS/AQS_exploded.jpg"),
-      },{
-        description: "Rear shell of sensor enclosure",
-        src: require("../assets/AQS/AQS_rear_shell.jpg"),
       },
       {
         description: "Draft angle analysis for injection molding",
         src: require("../assets/AQS/AQS_draft_analysis.jpg"),
+      },
+      {
+        description: "Mold flow analysis for injection molding",
+        src: require("../assets/AQS/AQS_MFA_1.jpg"),
+      },
+      {
+        description: "Mold flow fill time analysis",
+        src: require("../assets/AQS/AQS_MFA_4.jpg"),
+      },
+      {
+        description: "Mold flow quality analysis showing potential sink areas",
+        src: require("../assets/AQS/AQS_MFA_3.jpg"),
+      },         
+      {
+        description: "Mold flow fill",
+        src: require("../assets/AQS/AQS_Fill.mp4"),
       },
     ],
     links: {
